@@ -1,0 +1,175 @@
+/* Projects Container */
+.projects-container {
+    background-color: #f5d7e7;
+    padding: 60px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projects-heading {
+    width: 80%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .projects-subheading {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  /* Polaroid Carousel */
+  .polaroid-carousel {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 30px;
+    padding: 20px 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .polaroid-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Scroll Dots */
+  .project-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffb6d9;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #ff69b4;
+  }
+  
+  /* Polaroid Card Styling */
+  .polaroid-card {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 280px;
+    background-color: #fff;
+    border: 2px solid #ffb6d9;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    margin: 10px; /* Small margin around the card */
+    box-sizing: border-box;
+  }
+  
+  .polaroid-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image inside Polaroid card */
+  .polaroid-image {
+    width: calc(100% - 20px); /* 10px margin on both left and right */
+    height: 200px; /* Set a consistent height */
+    margin: 10px; /* Small margin on all sides */
+    object-fit: cover; /* Ensures images maintain aspect ratio and cover the area */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+  }
+  
+  /* Caption inside Polaroid card */
+  .caption {
+    padding: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #444;
+  }
+  
+  .caption h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+    color: #ff69b4;
+  }
+  
+  .caption p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .modal-content img.extra-image {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .modal-content a {
+    color: #ff69b4;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  

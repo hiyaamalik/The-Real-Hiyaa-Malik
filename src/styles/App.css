@@ -1,0 +1,65 @@
+/* App Container */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+  }
+  
+  /* Heading and title section */
+  .App h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .App h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* General Section Styling */
+  section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Styling for Navigation buttons (if needed) */
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .nav-buttons button {
+    background-color: #f5d7e7;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #e7a9c8;
+  }
+  
+  /* Footer Styling */
+  footer {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #f5d7e7;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    color: #555;
+    font-size: 0.9rem;
+  }
+  

@@ -1,0 +1,98 @@
+.about-container {
+    background-color: #f5d7e7;
+    padding: 60px 5%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-1.9cm);
+  }
+  
+  .about-heading {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    display: block;
+  }
+  
+  .about-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Text Bubble Area */
+  .about-bubble-wrapper {
+    position: relative;
+    width: 62%;
+  }
+  
+  .dialogue-bubble {
+    width: 100%;
+    display: block;
+    transform: translateY(-2cm);
+  }
+  
+  .bubble-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    transform: translateY(-70%); /* This will vertically center the text */
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: left;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .about-intro {
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  
+  .about-main,
+  .about-secondary {
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  
+  /* Polaroid Image */
+  .about-polaroid {
+    width: 50%;
+    min-width: 280px;
+    max-width: 380px;
+    margin-top: -1.5cm;
+    border-radius: 10px;
+  }
+  
+  /* Decorative Items */
+  /* Airplane */
+.airplane {
+    width: 80%;
+    min-width: 370px;
+    max-width: 370px;
+    margin-left: -1.5%; /* Shift left by 3cm (adjusted from 2% to -1%) */
+    margin-top: -12cm; /* Move the plane 2cm down */
+    position: absolute;
+  }
+  
+  /* Decorative Items */
+  .about-decorations {
+    margin-top: 4.3cm; 
+    position: relative;
+    text-align: left;
+    margin-left: 1cm; /* Shift left by 3cm (adjusted from 4cm to 1cm) */
+  }
+  
+  /* Shift decor items to the left by 3cm */
+  .decor-items {
+    width: 100%;
+    min-width: 600px;
+    max-width: 600px;
+    margin-top: -51cm;
+    margin-left: -2cm; /* Shift decor items 3cm to the left */
+  }
+   
