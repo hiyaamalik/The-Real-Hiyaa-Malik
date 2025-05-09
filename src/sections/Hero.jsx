@@ -28,7 +28,13 @@ const Hero = () => {
           <strong>I'VE ALWAYS BEEN DRAWN TO IDEAS — THE KIND YOU CAN FEEL, NOT JUST SOLVE.</strong>
         </p>
         <p style={styles.mainText}>
-          THAT'S WHAT LED ME TO ALL: A SPACE WHERE CLOCK AND TECHNOLOGY MEET CREATIVITY, AND SMALL IDEAS CAN TURN INTO POWERFUL TOOLS. I LOVE BUILDING THOUGHTFUL, CREATIVE, AND IMPACTFUL PROJECTS. WHETHER IT'S SPARKING CURIOSITY, TELLING BETTER STORIES, OR HELPING PEOPLE SEE THE WORLD A LITTLE DIFFERENTLY. I ENJOY NOT JUST USING INTELLIGENT TOOLS BUT SHAPING THEM TOO. MY WORK IS GUIDED BY CURIOSITY, CLARITY, AND CREATIVITY. I'M NOT CHASING COMPLEXITY FOR THE SAKE OF IT. I CARE ABOUT BUILDING THINGS THAT MAKE SENSE, FEEL RIGHT, AND LEAVE AN IMPRESSION. I'M CURRENTLY EXPLORING MEANINGFUL APPLICATIONS OF AI THAT BRING VALUE TO EVERYDAY WONDER. OPEN TO OPPORTUNITIES WHERE INTELLIGENCE MEETS CREATIVITY AND IDEAS ARE BROUGHT TO LIFE WITH HEART.
+        I’ve always been drawn to ideas — the kind you can feel, not just solve. 
+That’s what led me to AI: a space where logic and technology meet creativity, and small ideas can turn into powerful tools. I love building
+ thoughtful, creative, and impactful projects. Whether it’s sparking curiosity, telling better stories, or helping people see the world a
+ little differently, I enjoy not just using intelligent tools but shaping them too. My work is guided by curiosity, clarity, and creativity. I’m
+ not chasing complexity for the sake of it. I care about building things that make sense, feel right, and leave an impression.
+ I’m currently exploring meaningful applications of AI that bring value to everyday moments. Open to opportunities where intelligence
+ meets creativity and ideas are brought to life with heart
         </p>
       </div>
     </section>
