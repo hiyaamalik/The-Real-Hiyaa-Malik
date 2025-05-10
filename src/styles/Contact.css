@@ -5,7 +5,7 @@
   }
   
   .contact-heading {
-    max-width: 400px;
+    max-width: 65%;
     margin-bottom: 20px;
   }
   
@@ -29,15 +29,27 @@
     align-items: center;
   }
   
-  .contact-links a {
-    color: #fff;
+.contact-links a {
+    color: #0a0000;
+    display: inline-block;
+    margin: 95px; /* Horizontal gap between links */
     text-decoration: none;
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
+    margin-top: 8.5cm;
+    font-size: 1 rem;
+}
+.contact-links a:nth-child(-n+2) {
+    margin-top: 9cm;
+}
+.contact-links {
+    flex-direction: row; /* Change to horizontal display */
+    text-decoration: underline; /* Underline the links */
+}
   
   .contact-links a:hover {
-    color: #f5d7e7;
+    color: #cc006d;
     text-decoration: underline;
   }
-  
+.contact-bg {
+    width: 60%;
+    margin-top: -45px;
+}

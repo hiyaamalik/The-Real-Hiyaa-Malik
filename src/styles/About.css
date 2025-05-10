@@ -6,12 +6,12 @@
     transform: translateY(-1.9cm);
   }
   
-  .about-heading {
+.about-heading {
     width: 80%;
     max-width: 800px;
     margin: 0 auto 50px;
     display: block;
-  }
+}
   
   .about-flex {
     display: flex;

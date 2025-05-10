@@ -5,62 +5,49 @@
   }
   
   .extras-heading {
-    max-width: 400px;
-    margin-bottom: 20px;
+    width: 65%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    display: block;
   }
   
   .extras-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: end; /* Align all images to the bottom line */
+    gap: 40px;
     margin-top: 30px;
   }
   
   .extra-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 7cm;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .extra-card:hover {
-    transform: translateY(-5px);
+  .extra-card:first-child {
+    width: 8.1cm; /* Slightly larger for the first image */
+  }
+  
+  .extra-card:nth-child(2) {
+    align-self: end; /* Push second image to bottom */
   }
   
   .extra-card img {
     width: 100%;
-    max-width: 150px;
-    margin-bottom: 15px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .extra-card p {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
-  /* Modal Style (if necessary, for modal transitions) */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-content {
-    background: white;
-    padding: 30px;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  .extra-card:hover img {
+    transform: scale(1.03);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
   }
   
