@@ -4,23 +4,27 @@ import headingContact from '../assets/heading-contact.png';
 import '../styles/Contact.css';
 
 const Contact = () => {
-  return (
-    <section id="contact" className="contact-section">
-      <img src={headingContact} alt="Find Me Heading" className="contact-heading" />
+    return (
+        <section id="contact" className="contact-section">
+            <img src={headingContact} alt="Find Me Heading" className="contact-heading" />
 
-      <div className="contact-wrapper">
-        <img src={contactBg} alt="Contact Grid Background" className="contact-bg" />
+            <div className="contact-wrapper">
+                <img src={contactBg} alt="Contact Grid Background" className="contact-bg" />
 
-        {/* Overlayed labels */}
-        <div className="contact-links">
-          <a href="https://github.com/hiyaamalik" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="mailto:youremail@example.com">ContactForm</a>
-          <a href="https://www.linkedin.com/in/hiyaamalik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                {/* Overlayed labels */}
+                <div className="contact-links">
+                    <a href="https://github.com/hiyaamalik" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:youremail@example.com">ContactForm</a>
+                    <a href="https://www.linkedin.com/in/hiyaamalik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
 
-        </div>
-      </div>
-    </section>
-  );
+            {/* Copyright line */}
+            <footer className="contact-footer">
+                <p>© 2025 Hiyaa Malik. All rights reserved.</p>
+            </footer>
+        </section>
+    );
 };
 
 export default Contact;
