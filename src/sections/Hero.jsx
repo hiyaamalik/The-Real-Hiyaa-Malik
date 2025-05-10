@@ -15,7 +15,7 @@ const Hero = () => {
         <div style={styles.navBar}>
           <a href="#about" style={styles.navLink}>ABOUT ME</a>
           <a href="#projects" style={{ textDecoration: 'none', color: '#000' }}>PROJECTS</a>
-          <a href="#skills" style={styles.navLink}>SKILLS</a>
+          <a href="#powers" style={styles.navLink}>SKILLS</a>
           <a href="#experience" style={styles.navLink}>WORK EXPERIENCE</a>
           <a href="#extracurriculars" style={styles.navLink}>EXTRA CURRICULARS</a>
           <a href="#contact" style={styles.navLink}>FIND ME</a>
