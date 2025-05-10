@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import profilePolaroid from '../assets/profile-polaroid.png';
 import dialogueBubble from '../assets/dialogue-bubble.png';
 import decorItems from '../assets/decorative-items.png';
@@ -7,6 +7,26 @@ import headingAbout from '../assets/heading-about.png';
 import '../styles/About.css';
 
 const About = () => {
+  const polaroidRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (polaroidRef.current) {
+      observer.observe(polaroidRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="about" className="about-container">
       <img src={headingAbout} alt="About heading" className="about-heading" />
@@ -28,8 +48,13 @@ const About = () => {
           </div>
         </div>
 
-        {/* Polaroid Image */}
-        <img src={profilePolaroid} alt="Hiyaa Malik" className="about-polaroid" />
+        {/* Polaroid Image with scroll animation */}
+        <img
+          src={profilePolaroid}
+          alt="Hiyaa Malik"
+          className="about-polaroid"
+          ref={polaroidRef}
+        />
       </div>
 
       <div className="about-decorations">

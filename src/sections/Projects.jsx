@@ -13,8 +13,8 @@ const Projects = () => {
     {
       title: 'PROJECT 1',
       description: 'One line description',
-      details: 'Details of project 1',
-      image: '', // Add your image path
+      details: 'Baymax',
+      image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67', // Add your image path
       link: '',  // Add your project link
     },
     {

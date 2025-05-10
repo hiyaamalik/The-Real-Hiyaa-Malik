@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -7cm;
   }
   
   .projects-heading {
@@ -40,7 +41,7 @@
     flex-wrap: nowrap;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: -60px;
   }
   
   .polaroid-carousel::-webkit-scrollbar {
@@ -74,7 +75,8 @@
   .polaroid-card {
     scroll-snap-align: center;
     flex: 0 0 auto;
-    width: 280px;
+    height: 350px;
+    width: 300px;
     background-color: #fff;
     border: 2px solid #ffb6d9;
     border-radius: 12px;
@@ -82,7 +84,7 @@
     cursor: pointer;
     transition: transform 0.3s ease;
     overflow: hidden;
-    margin: 10px; /* Small margin around the card */
+    margin: 10px; 
     box-sizing: border-box;
   }
   

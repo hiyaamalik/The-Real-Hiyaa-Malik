@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import headingExperience from '../assets/heading-experience.png';
 import workGirl from '../assets/work-girl.png';
 import star from '../assets/star.png';
@@ -20,6 +20,28 @@ const experienceData = [
 ];
 
 const Experience = () => {
+  const itemRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            observer.unobserve(entry.target); // Avoid re-triggering
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    itemRefs.current.forEach(ref => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="experience" className="experience-section">
       <img src={headingExperience} alt="Work Experience" className="experience-heading" />
@@ -29,7 +51,11 @@ const Experience = () => {
 
         <div className="timeline">
           {experienceData.map((exp, index) => (
-            <div className="timeline-item" key={index}>
+            <div
+              className="timeline-item"
+              key={index}
+              ref={el => (itemRefs.current[index] = el)}
+            >
               <img src={star} alt="Star" className="star" />
               <div className="timeline-content">
                 <h3>{exp.title}</h3>

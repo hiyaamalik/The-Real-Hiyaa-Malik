@@ -1,12 +1,13 @@
 .extras-section {
     background-color: #f5d7e7;
-    padding: 60px 20px;
+    
     text-align: center;
+    margin-top: -7cm,
   }
   
   .extras-heading {
-    width: 65%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 750px;
     margin: 0 auto 40px;
     display: block;
   }
