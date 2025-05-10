@@ -1,37 +1,54 @@
 import React from 'react';
 
 const ProjectModal = ({ show, onClose, project }) => {
-  if (!show) return null; // Don't render the modal if 'show' is false
+  if (!show || !project) return null;
 
   return (
     <div className="modal-overlay" style={styles.overlay} onClick={onClose}>
       <div 
         className="modal-content" 
         style={styles.content} 
-        onClick={e => e.stopPropagation()} // Prevent modal content click from closing the modal
+        onClick={(e) => e.stopPropagation()}
       >
+        <button onClick={onClose} style={styles.closeButton}>×</button>
+        
         <h2 style={styles.title}>{project.title}</h2>
-        <p>{project.details}</p>
         
-        {/* Conditionally render the image if available */}
-        {project.image && <img src={project.image} alt={project.title} style={styles.image} />}
-        
-        <div className="modal-links" style={styles.links}>
-          {/* Render the 'Visit' link if the project link is provided */}
-          {project.link && (
-            <a href={project.link} target="_blank" style={styles.link}>
-              Visit
-            </a>
-          )}
+        {/* Removed: Main Image (project.image) */}
+
+        {/* Short Details */}
+        <p style={styles.details}>{project.modalContent.details}</p>
+
+        {/* Full Description */}
+        <p style={styles.fullDescription}>{project.modalContent.fullDescription}</p>
+
+        {/* Extra Images (if any) */}
+        <div style={styles.extraImages}>
+          {project.modalContent.extraImages.map((img, index) => (
+            <img 
+              key={index} 
+              src={img} 
+              alt={`${project.title} ${index}`} 
+              style={styles.extraImage} 
+            />
+          ))}
         </div>
 
-        <button onClick={onClose} style={styles.closeButton}>Close</button>
+        {/* Achievements (if any) */}
+        <div style={styles.achievements}>
+          <h3 style={styles.subtitle}>Achievements:</h3>
+          <ul style={styles.list}>
+            {project.modalContent.achievements.map((item, index) => (
+              <li key={index} style={styles.listItem}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
 
-// Inline styles for modal styling
+// Styles (same as before)
 const styles = {
   overlay: {
     position: 'fixed',
@@ -39,51 +56,77 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Overlay background
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 1000, // Ensure modal is above everything else
+    zIndex: 1000,
   },
   content: {
     backgroundColor: '#fff',
-    padding: '20px',
+    padding: '25px',
     borderRadius: '10px',
-    maxWidth: '80%',
-    maxHeight: '80%',
-    overflowY: 'auto', // Allow scrolling if content is too large
-    textAlign: 'center',
+    maxWidth: '600px',
+    maxHeight: '80vh',
+    overflowY: 'auto',
     position: 'relative',
   },
   title: {
+    fontSize: '1.8rem',
     marginBottom: '10px',
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
+    color: '#333',
   },
-  image: {
-    width: '100%',
-    height: 'auto',
+  details: {
+    fontSize: '1rem',
+    color: '#555',
     marginBottom: '15px',
-    borderRadius: '8px',
   },
-  links: {
-    marginTop: '15px',
+  fullDescription: {
+    fontSize: '1rem',
+    lineHeight: '1.6',
+    color: '#444',
+    marginBottom: '20px',
   },
-  link: {
-    color: '#007bff',
-    textDecoration: 'none',
+  extraImages: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '10px',
+    marginBottom: '20px',
+  },
+  extraImage: {
+    width: '48%',
+    borderRadius: '6px',
+  },
+  achievements: {
+    marginTop: '10px',
+  },
+  subtitle: {
+    fontSize: '1.2rem',
+    marginBottom: '8px',
+    color: '#333',
+  },
+  list: {
+    paddingLeft: '20px',
+  },
+  listItem: {
+    marginBottom: '5px',
+    color: '#555',
   },
   closeButton: {
     position: 'absolute',
     top: '10px',
     right: '10px',
-    backgroundColor: '#f5d7e7',
+    background: 'none',
     border: 'none',
-    padding: '8px 15px',
-    borderRadius: '5px',
+    fontSize: '1.5rem',
     cursor: 'pointer',
-    fontWeight: 'bold',
+    color: '#666',
   },
+};
+
+styles.list = {
+    ...styles.list,
+    textAlign: 'center',
 };
 
 export default ProjectModal;

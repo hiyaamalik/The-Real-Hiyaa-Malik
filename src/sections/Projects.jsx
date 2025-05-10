@@ -1,70 +1,113 @@
 import React, { useRef, useState, useEffect } from 'react';
 import headingProjects from '../assets/projects.png';
 import PolaroidCard from '../components/PolaroidCard';
-import ProjectModal from '../components/ProjectModal';
+import ProjectModal from '../components/MagicModal';
 import '../styles/Projects.css';
 
 const Projects = () => {
   const scrollRef = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const projects = [
     {
-      title: 'PROJECT 1',
-      description: 'One line description',
-      details: 'Baymax',
-      image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67', // Add your image path
-      link: '',  // Add your project link
+      title: 'Baymax Health Assistant',
+      description: 'AI-powered healthcare chatbot',
+      image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
+      details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
+      extraImages: [
+        'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
+        'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain'
+      ],
+      achievements: [
+        'Won "Best Health Tech" at HackMIT 2022',
+        'Processes 100+ queries per minute',
+        '94% user satisfaction rate'
+      ],
+      link: 'https://baymax-demo.com'
     },
     {
-      title: 'PROJECT 2',
-      description: 'One line description',
-      details: 'Details of project 2',
-      image: '',
-      link: '',
+      title: 'EcoTrack',
+      description: 'Carbon footprint tracker',
+      image: 'https://example.com/ecotrack.jpg',
+      details: 'Mobile application that tracks your daily carbon footprint.',
+      extraImages: [
+        'https://example.com/ecotrack1.jpg',
+        'https://example.com/ecotrack2.jpg'
+      ],
+      achievements: [
+        'Featured in App Store "Must Have" section',
+        '10,000+ active users'
+      ],
+      link: 'https://ecotrack-app.com'
     },
     {
-      title: 'PROJECT 3',
-      description: 'One line description',
-      details: 'Details of project 3',
-      image: '',
-      link: '',
-    },
-    {
-      title: 'PROJECT 4',
-      description: 'One line description',
-      details: 'Details of project 4',
-      image: '',
-      link: '',
-    },
-    {
-      title: 'PROJECT 5',
-      description: 'One line description',
-      details: 'Details of project 5',
-      image: '',
-      link: '',
-    },
+        title: 'Baymax Health Assistant',
+        description: 'AI-powered healthcare chatbot',
+        image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
+        details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
+        extraImages: [
+          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
+          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain'
+        ],
+        achievements: [
+          'Won "Best Health Tech" at HackMIT 2022',
+          'Processes 100+ queries per minute',
+          '94% user satisfaction rate'
+        ],
+        link: 'https://baymax-demo.com'
+      },
+      {
+        title: 'EcoTrack',
+        description: 'Carbon footprint tracker',
+        image: 'https://example.com/ecotrack.jpg',
+        details: 'Mobile application that tracks your daily carbon footprint.',
+        extraImages: [
+          'https://example.com/ecotrack1.jpg',
+          'https://example.com/ecotrack2.jpg'
+        ],
+        achievements: [
+          'Featured in App Store "Must Have" section',
+          '10,000+ active users'
+        ],
+        link: 'https://ecotrack-app.com'
+      },
+      {
+        title: 'Baymax Health Assistant',
+        description: 'AI-powered healthcare chatbot',
+        image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
+        details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
+        extraImages: [
+          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
+          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain'
+        ],
+        achievements: [
+          'Won "Best Health Tech" at HackMIT 2022',
+          'Processes 100+ queries per minute',
+          '94% user satisfaction rate'
+        ],
+        link: 'https://baymax-demo.com'
+      }
   ];
-  
+
   const scrollToProject = (index) => {
     const container = scrollRef.current;
     if (!container) return;
-    
+
     const cardWidth = container.querySelector('.polaroid-card')?.offsetWidth;
     if (!cardWidth) return;
-    
+
     container.scrollTo({
-      left: index * (cardWidth + 30), // Adding gap width
+      left: index * (cardWidth + 30),
       behavior: 'smooth',
     });
     setCurrentIndex(index);
   };
-  
+
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
-    
+
     const handleScroll = () => {
       const cardWidth = container.querySelector('.polaroid-card')?.offsetWidth;
       if (!cardWidth) return;
@@ -76,20 +119,19 @@ const Projects = () => {
         setCurrentIndex(activeIndex);
       }
     };
-    
+
     container.addEventListener('scroll', handleScroll);
     return () => container.removeEventListener('scroll', handleScroll);
   }, [currentIndex, projects.length]);
-  
+
   return (
     <section id="projects" className="projects-container">
       <img src={headingProjects} alt="Projects Heading" className="projects-heading" />
-      
+
       <p className="projects-subheading">
         HERE'S A PEEK INTO THE IDEAS WE BROUGHT TO LIFE. CLICK ON A PROJECT TO READ MORE!
       </p>
       
-      {/* Polaroid Carousel */}
       <div className="polaroid-carousel" ref={scrollRef}>
         {projects.map((project, index) => (
           <PolaroidCard
@@ -98,6 +140,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             onClick={() => setSelectedProject(project)}
+            useInternalModal={false} // Flag to disable internal modal
           />
         ))}
       </div>

@@ -30,7 +30,7 @@
   /* 📍 Timeline beside the girl */
   .timeline {
     position: relative;
-    width: 45%;
+    width: 55%; /* Increased slightly to give more space to text */
     padding-left: 50px;
   }
   
@@ -51,6 +51,9 @@
     position: relative;
     padding-left: 80px;
     margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
   }
   
   /* ⭐ Star placed directly on the line */
@@ -65,8 +68,12 @@
   
   /* 📄 Text content aligned with star center */
   .timeline-content {
-    text-align: left;
-    margin-top: 12px; /* Aligns heading center with star */
+    text-align: justify;
+    margin-top: 12px;
+    padding-right: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .timeline-content h3 {
@@ -80,18 +87,10 @@
     line-height: 1.6;
     color: #444;
   }
-  .timeline-item {
-    position: relative;
-    padding-left: 80px;
-    margin-bottom: 60px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-  }
   
+  /* Reveal animation */
   .timeline-item.reveal {
     opacity: 1;
     transform: translateY(0);
   }
-  
   

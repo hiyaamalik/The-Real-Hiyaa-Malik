@@ -5,18 +5,16 @@ import star from '../assets/star.png';
 import '../styles/Experience.css';
 
 const experienceData = [
-  {
-    title: 'Intern at XYZ',
-    description: 'Worked on cybersecurity monitoring tools like ArcSight and Seceon SIEM.',
-  },
-  {
-    title: 'Freelancer',
-    description: 'Created AI/ML projects for clients and participated in research studies.',
-  },
-  {
-    title: 'Campus Tech Lead',
-    description: 'Organized tech workshops and guided peers in hands-on AI projects.',
-  },
+    {
+        title: 'Intern at CSIR NPL',
+        date: '13 May 2025- present',
+        description: 'Practicing hands-on experience in the field of IoT, Data Analytics and Development.',
+    },
+    {
+        title: 'SoC Analyst Intern at Tata Advanced Systems Limited',
+        date: '17 June 2024 - 5 July 2024',
+        description: 'Gained hands-on experience in cybersecurity through practical demonstration of threat detection using ArcSight and Seceon SIEM tools. Worked with event log analysis, rule-based and learnt about MITRE ATT&CK framework, CIA Triad, OSI model attacks, and various proxy techniques.',
+    },
 ];
 
 const Experience = () => {
@@ -59,6 +57,7 @@ const Experience = () => {
               <img src={star} alt="Star" className="star" />
               <div className="timeline-content">
                 <h3>{exp.title}</h3>
+                <p className="date">{exp.date}</p> {/* Date added here */}
                 <p>{exp.description}</p>
               </div>
             </div>

@@ -17,12 +17,12 @@ const topNotes = [
 
 const bottomNotes = [
   {
-    title: 'Technical Skills',
+    title: 'Soft Skills',
     list: ['Communication, Team Leadership, Coordination, Event Management, Problem Solving, Content Creation, Time Management'],
   },
   {
-    title: '',
-    list: [],
+    title: 'Software/Tools',
+    list: ['Google Colab, Jupyter, Microsoft Tools, PostGre SQL, Canva, Cybersecurity Tools (ArcSight SIEM, Seceon SIEM), Github '],
   }
 ];
 
