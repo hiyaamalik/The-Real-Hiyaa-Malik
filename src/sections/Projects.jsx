@@ -24,15 +24,15 @@ const Projects = () => {
         'Processes 100+ queries per minute',
         '94% user satisfaction rate'
       ],
-      link: 'https://baymax-demo.com'
+      link: 'https://baymaxhealthcarecompanion.streamlit.app/'
     },
     {
-      title: 'EcoTrack',
+      title: 'Self Healing AI for Network Security',
       description: 'Carbon footprint tracker',
       image: 'https://example.com/ecotrack.jpg',
       details: 'Mobile application that tracks your daily carbon footprint.',
       extraImages: [
-        'https://example.com/ecotrack1.jpg',
+        'https://private-user-images.githubusercontent.com/197499780/421335012-8706d2eb-df12-4c2d-b3ed-4405081d069f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDc1ODI3MjYsIm5iZiI6MTc0NzU4MjQyNiwicGF0aCI6Ii8xOTc0OTk3ODAvNDIxMzM1MDEyLTg3MDZkMmViLWRmMTItNGMyZC1iM2VkLTQ0MDUwODFkMDY5Zi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxOFQxNTMzNDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMjhjM2ZkYzcwZjY5OWZjOTk3YzA1ZTZkZmRhYTBkNjMyZTM0MWNjZTgyZDA3NGExMjVmNDYyNGU2ZDZhOGIyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.7FulL1y942rWs1MJ_Teive5U255Bo4ULbp5Z3JsUP_0',
         'https://example.com/ecotrack2.jpg'
       ],
       achievements: [

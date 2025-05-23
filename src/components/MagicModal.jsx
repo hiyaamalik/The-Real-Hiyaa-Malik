@@ -58,7 +58,7 @@ const MagicModal = ({ show, onClose, project }) => {
               rel="noopener noreferrer"
               className="project-link"
             >
-              View Live Project
+              Project/Repository
             </a>
           </div>
         )}
