@@ -12,14 +12,24 @@ const ContactForm = ({ onClose }) => {
     const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    // Debug logs to check environment variable loading
+    console.log("Service ID:", serviceID);
+    console.log("Template ID:", templateID);
+    console.log("Public Key:", publicKey);
+
+    if (!serviceID || !templateID || !publicKey) {
+      alert('Missing EmailJS environment variables.');
+      return;
+    }
+
     emailjs.sendForm(serviceID, templateID, form.current, publicKey)
       .then((result) => {
         alert('Message sent successfully!');
         form.current.reset();
-        if (onClose) {
-          onClose(); // close modal
-        }
-      }, (error) => {
+        if (onClose) onClose(); // close modal if provided
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
         alert('Failed to send message. Please try again.');
       });
   };
