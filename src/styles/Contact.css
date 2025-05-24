@@ -1,26 +1,28 @@
+/* PRESERVED YOUR ORIGINAL STYLES */
 .contact-section {
     position: relative;
     padding: 2px;
     text-align: center;
     margin-top: -2cm;
-  }
-  
-  .contact-heading {
+}
+
+.contact-heading {
     max-width: 65%;
     margin-bottom: 20px;
-  }
-  
-  .contact-wrapper {
+}
+
+.contact-wrapper {
     position: relative;
-  }
-  
-  .contact-bg {
-    width: 100%;
+}
+
+.contact-bg {
+    width: 60%;
     height: auto;
-    opacity: 0.5; /* Can adjust opacity as needed */
-  }
-  
-  .contact-links {
+    opacity: 0.5;
+    margin-top: -45px;
+}
+
+.contact-links {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,29 +30,114 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
+}
+
 .contact-links a {
     color: #0a0000;
     display: inline-block;
-    margin: 95px; /* Horizontal gap between links */
+    margin: 95px;
     text-decoration: none;
     margin-top: 8.5cm;
-    font-size: 1 rem;
+    font-size: 1rem;
 }
+
 .contact-links a:nth-child(-n+2) {
     margin-top: 9cm;
 }
+
 .contact-links {
-    flex-direction: row; /* Change to horizontal display */
-    text-decoration: underline; /* Underline the links */
+    flex-direction: row;
+    text-decoration: underline;
 }
-  
-  .contact-links a:hover {
+
+.contact-links a:hover {
     color: #cc006d;
     text-decoration: underline;
-  }
+}
+
 .contact-bg {
     width: 60%;
     margin-top: -45px;
+}
+
+/* UPDATED MODAL BUTTON TO MATCH LINKS EXACTLY */
+.modal-btn {
+    color: #0a0000 !important;
+    display: inline-block !important;
+    margin: 95px !important;
+    text-decoration: none !important;
+    margin-top: 8.5cm !important;
+    font-size: 1rem !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    font-family: inherit !important;
+}
+
+/* Force same spacing for first two items */
+.contact-links a:nth-child(-n+2),
+.contact-links button.modal-btn {
+    margin-top: 9cm !important;
+}
+
+/* Matching hover states */
+.contact-links a:hover,
+.modal-btn:hover {
+    color: #cc006d !important;
+    text-decoration: underline !important;
+}
+
+/* MODAL STYLES (UNCHANGED) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff0f5;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #c94f7c;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border: 1px solid #f5c2d8;
+    border-radius: 10px;
+    background-color: #fffafc;
+}
+
+.contact-form button {
+    background-color: #e471a0;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
 }
