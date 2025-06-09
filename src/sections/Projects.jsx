@@ -14,7 +14,7 @@ const Projects = () => {
       title: 'Baymax Health Assistant',
       description: 'AI-powered healthcare chatbot',
       image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
-      details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
+      details: 'I always wanted to do something for the healthcare industry, so I developed an AI chatbot that provides preliminary healthcare advice using natural language processing and Generative AI.',
       extraImages: [
         'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
         'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain'
@@ -48,7 +48,7 @@ const Projects = () => {
     {
         title: 'Intellégendes',
         description: 'AI-Powered Caption Generation',
-        image: 'https://private-user-images.githubusercontent.com/142331596/447231491-5f6e66b3-06d9-48e6-a114-8414bb556dd2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDgwNzU4MjgsIm5iZiI6MTc0ODA3NTUyOCwicGF0aCI6Ii8xNDIzMzE1OTYvNDQ3MjMxNDkxLTVmNmU2NmIzLTA2ZDktNDhlNi1hMTE0LTg0MTRiYjU1NmRkMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyNFQwODMyMDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNDA1OTgwZjdiNDZkMDFlNjg0M2I1YTBiYmMyOWRjMGM5OTY5MTI3NGVlNzM3MDczZTlmMGFkYmUzNTBiYmVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Tb6qPsBl9nG24-oJnX8hqAsIOJklsVQwqhorbxMCTBg',
+        image: 'https://private-user-images.githubusercontent.com/142331596/447231491-5f6e66b3-06d9-48e6-a114-8414bb556dd2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk0NjA2MjMsIm5iZiI6MTc0OTQ2MDMyMywicGF0aCI6Ii8xNDIzMzE1OTYvNDQ3MjMxNDkxLTVmNmU2NmIzLTA2ZDktNDhlNi1hMTE0LTg0MTRiYjU1NmRkMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwOVQwOTEyMDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NDUwZDkwYTBiZTQ2NTg5MGVmNDQ5ZmI3MDc5YzQ5YmMyZDk4MmE4NWIxY2ZjYjg4YTE0ODEwMWQ1ODhlODYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.sT74A75_OrNLJaOk87y-GrSwfxbFOQN6OvnXkbdgXHw',
         details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
         extraImages: [
           'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
