@@ -5,7 +5,7 @@ import extraHackathons from '../assets/extra-hackathons.png';
 import extraVolunteering from '../assets/extra-volunteering.png';
 import ProjectModal from '../components/ProjectModal';
 import '../styles/Extras.css';
-import Aihorizon from '../assets/Aihorizon.png';
+import Aihorizon from '../assets/AIhorizon.png';
 import IEEEIndicon from '../assets/IEEEIndicon.png';
 
 const extracurriculars = [
