@@ -5,18 +5,27 @@ import extraHackathons from '../assets/extra-hackathons.png';
 import extraVolunteering from '../assets/extra-volunteering.png';
 import ProjectModal from '../components/ProjectModal';
 import '../styles/Extras.css';
+import Aihorizon from '../assets/Aihorizon.png';
+import IEEEIndicon from '../assets/IEEEIndicon.png';
 
 const extracurriculars = [
   {
     title: 'Clubs & Events',
     image: extraClubs,
     modalContent: {
-      extraImages: [extraClubs], // Add more images if needed
-      details: 'Organized college fests, hosted open mics, and led creative club activities.',
-      fullDescription: 'As part of the college clubs, I organized multiple events including annual fests, open mic nights, and workshops. I also led a team of 20+ members in the Creative Arts Club.',
+      extraImages: [extraClubs],
+      details: 'Organized college fests events and university club events, and hosted industry guest lectures and conferences sessions.',
+      fullDescription: [
+        'Started as a member of the design team at IEEE Student Branch, AMity University and was later promoted to Head of Design. Led the creation of social media graphics, event branding, and all visual content for technical and promotional campaigns.',
+        'Later on became the Vice President of Srijan Art Club where we led and hosted multiple creative events, coordinated art volunteering initiatives, and organized NGO outreach drives to promote community engagement through art.',
+        'Part of the organizing committee for Battleground Arena at Amity Youth Fest 2024 — managed event planning, sponsorship coordination, and design collateral.',
+        'Served as Master of Ceremony for multiple guest lectures and conference sessions, ensuring smooth flow and audience engagement.',
+      ],
       achievements: [
-        'Managed events with 500+ attendees',
-        'Won "Best Organizer" award in 2022',
+        'Demonstrated leadership and creativity through event and design management roles.',
+        'Developed strong communication skills as host for various formal sessions.',
+        'Managed sponsorships, logistics, and branding for large-scale college events.',
+        'Strengthened teamwork, organization, and problem-solving across multiple student-led initiatives.',
       ],
     },
   },
@@ -25,14 +34,19 @@ const extracurriculars = [
     image: extraHackathons,
     modalContent: {
       extraImages: [
-        "https://media.licdn.com/dms/image/v2/D5622AQG84hITK_m9Mw/feedshare-shrink_2048_1536/B56ZTRU.0qHsAo-/0/1738678728282?e=1749686400&v=beta&t=MqYvixNsed2HAMs5Rh9G7mtqN-vqd7LcQxl-6bifX38",
-        "https://media.licdn.com/dms/image/v2/D5622AQGsoIDvYWQtLg/feedshare-shrink_1280/B56ZTA4z_NGsAo-/0/1738402906811?e=1749686400&v=beta&t=CGmIYb_eCwIRzjPkFTc8zZ_Rb1hZeT63p6p8AXpoaYI"
+        Aihorizon, IEEEIndicon
       ],
-      details: 'Participated in 10+ national-level hackathons; won 3 times for AI innovation.',
-      fullDescription: 'Competed in hackathons like Smart India Hackathon, HackTheNorth, and others. Built AI-powered solutions for real-world problems.',
+      details: 'Recognized in National Hackathons for Innovative Tech Solutions and Social Impact',
+      fullDescription: [
+        'Actively participated in national-level hackathons and innovation challenges with a focus on AI for social good.',
+        'As part of Team Adyant, co-developed Project N: The Women Safety and Analytics Tool, an AI-based solution featuring smart surveillance and SOS systems.',
+        'he project was selected among the Top 10 finalists at IEEE Intel INDICON 2024 held at IIT Kharagpur, after clearing multiple rounds including research paper, technical demo, and live pitching.',
+        'It also secured 2nd place at AI Horizon 2.0, IIM Bodh Gaya, for its innovative approach to enhancing public safety.',
+        'Additionally , participated in Technovate Hackathon by Sharda University, where we (an all girls trio), represented our team as ByteForce in the final round (24 hour hackathon). '
+      ],
       achievements: [
-        '1st Place - AI Innovation Challenge (2023)',
-        'Top 5 - National Hackathon League',
+        'Top 10 Finalist, IEEE Intel INDICON 2024 @ IIT Kharagpur – Selected for the national grand finale live pitch round for Project N, an AI-based women safety tool.',
+        '2nd Place, AI Horizon 2.0 @ IIM Bodh Gaya – Recognized for innovation in AI for social impact with Project N.',
       ],
     },
   },
@@ -41,11 +55,14 @@ const extracurriculars = [
     image: extraVolunteering,
     modalContent: {
       extraImages: [extraVolunteering],
-      details: 'Taught coding to underprivileged kids, and volunteered at community events.',
-      fullDescription: 'Volunteered with NGOs to teach Python and web development to kids. Organized charity drives and community clean-up events.',
+      details: 'Coming Soon',
+      fullDescription: [
+        'Coming Soon',
+        
+      ],
       achievements: [
-        '100+ hours of teaching',
-        'Led a team of 15 volunteers',
+        'Coming Soon',
+        
       ],
     },
   },

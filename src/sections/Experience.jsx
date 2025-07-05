@@ -7,8 +7,8 @@ import '../styles/Experience.css';
 const experienceData = [
     {
         title: 'Intern at CSIR NPL',
-        date: '13 May 2025- present',
-        description: 'Practicing hands-on experience in the field of IoT, Data Analytics and Development.',
+        date: '13 May 2025- 4 July 2025',
+        description: 'Worked on the user module and dashboard of SensorSync — a real-time sensor data visualization and management platform developed at CSIR–NPL.',
     },
     {
         title: 'SoC Analyst Intern at Tata Advanced Systems Limited',

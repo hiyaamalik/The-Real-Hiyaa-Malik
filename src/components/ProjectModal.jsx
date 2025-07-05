@@ -126,7 +126,7 @@ const styles = {
 
 styles.list = {
     ...styles.list,
-    textAlign: 'center',
+    textAlign: 'left',
 };
 
 export default ProjectModal;
