@@ -4,6 +4,9 @@ import PolaroidCard from '../components/PolaroidCard';
 import ProjectModal from '../components/MagicModal';
 import '../styles/Projects.css';
 import Intellegendes from '../assets/447231491-5f6e66b3-06d9-48e6-a114-8414bb556dd2.png';
+import SelfHeal from '../assets/SelfHeal.png';
+import SelfHeal2 from '../assets/SelfHeal2.png';
+import SelfH from '../assets/SelfH (1).png'; 
 
 const Projects = () => {
   const scrollRef = useRef(null);
@@ -65,7 +68,7 @@ const Projects = () => {
     {
   title: 'Self-Healing AI for Network Security',
   description: 'Cybersecurity threat detection & auto-remediation system',
-  image: 'https://example.com/network-security-image.jpg', 
+  image: SelfH, 
   details: (
       <div className="project-details">
         <h3>Project Overview</h3>
@@ -104,10 +107,7 @@ const Projects = () => {
       </div>
     ),
   extraImages: [
-    'https://private-user-images.githubusercontent.com/197499780/421335210-ae5ad346-5776-4c5e-8ad0-edd5ca0e5fb4.png',
-    'https://private-user-images.githubusercontent.com/197499780/421336067-56b24994-dec2-4033-953c-752fce4df83b.png',
-    'https://private-user-images.githubusercontent.com/197499780/421336169-a3014a3b-3e2c-4d5d-bc11-eb36afa006c8.png',
-    'https://private-user-images.githubusercontent.com/197499780/421336335-3e407aa3-7ae3-4cd9-b8db-92150997ec8c.png'
+    SelfHeal, SelfHeal2
   ],
   achievements: [
     'Reduced threat response time by 82% compared to manual monitoring',
@@ -123,8 +123,7 @@ const Projects = () => {
         image: Intellegendes,
         details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
         extraImages: [
-          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
-          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain'
+          
         ],
         achievements: [
           'Won "Best Health Tech" at HackMIT 2022',
@@ -134,8 +133,8 @@ const Projects = () => {
         link: 'https://intellegendes.vercel.app/'
       },
       {
-        title: 'EcoTrack',
-        description: 'Carbon footprint tracker',
+        title: 'Life.OS',
+        description: 'A themed personal productivity and focus management app',
         image: 'https://example.com/ecotrack.jpg',
         details: 'Mobile application that tracks your daily carbon footprint.',
         extraImages: [
@@ -149,20 +148,17 @@ const Projects = () => {
         link: 'https://ecotrack-app.com'
       },
       {
-        title: 'Baymax Health Assistant',
-        description: 'AI-powered healthcare chatbot',
+        title: 'SensorSync Portal',
+        description: 'Developed a portal for real-time sensor monitoring and management, data visualization, and analytics.',
         image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
         details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
         extraImages: [
-          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain',
-          'https://tse1.mm.bing.net/th/id/OIP.kUlNGTmZP3sTt-A5ht8AgwHaMR?cb=iwp2&rs=1&pid=ImgDetMain'
+          
         ],
         achievements: [
-          'Won "Best Health Tech" at HackMIT 2022',
-          'Processes 100+ queries per minute',
-          '94% user satisfaction rate'
+          
         ],
-        link: 'https://baymax-demo.com'
+        link: ''
       }
   ];
 
