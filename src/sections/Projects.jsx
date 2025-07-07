@@ -7,6 +7,8 @@ import Intellegendes from '../assets/447231491-5f6e66b3-06d9-48e6-a114-8414bb556
 import SelfHeal from '../assets/SelfHeal.png';
 import SelfHeal2 from '../assets/SelfHeal2.png';
 import SelfH from '../assets/SelfH (1).png'; 
+import lifeos from '../assets/lifeos.PNG'; 
+import sensorsync from '../assets/sensorsync.png'; 
 
 const Projects = () => {
   const scrollRef = useRef(null);
@@ -135,7 +137,7 @@ const Projects = () => {
       {
         title: 'Life.OS',
         description: 'A themed personal productivity and focus management app',
-        image: 'https://example.com/ecotrack.jpg',
+        image: lifeos,
         details: 'Mobile application that tracks your daily carbon footprint.',
         extraImages: [
           'https://example.com/ecotrack1.jpg',
@@ -150,7 +152,7 @@ const Projects = () => {
       {
         title: 'SensorSync Portal',
         description: 'Developed a portal for real-time sensor monitoring and management, data visualization, and analytics.',
-        image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
+        image: sensorsync,
         details: 'Developed an AI chatbot that provides preliminary healthcare advice using natural language processing.',
         extraImages: [
           
