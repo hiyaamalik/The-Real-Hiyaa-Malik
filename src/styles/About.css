@@ -111,7 +111,8 @@
 @media (max-width: 768px) {
     .about-container {
         padding: 40px 3%;
-        transform: translateY(-1cm);
+        transform: translateY(-0.5cm);
+        overflow-x: hidden;
     }
     
     .about-heading {
@@ -121,30 +122,35 @@
     
     .about-flex {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         align-items: center;
     }
     
     .about-bubble-wrapper {
         width: 100%;
         order: 2;
+        margin-top: 20px;
     }
     
     .dialogue-bubble {
-        transform: translateY(-1cm);
+        transform: translateY(0);
     }
     
     .bubble-text {
-        font-size: 14px;
-        line-height: 1.6;
-        left: 8%;
-        right: 8%;
-        transform: translateY(-65%);
+        font-size: 13px;
+        line-height: 1.5;
+        left: 12%;
+        right: 12%;
+        transform: translateY(-60%);
+    }
+    
+    .about-intro {
+        margin-bottom: 10px;
     }
     
     .about-main,
     .about-secondary {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     
     .about-polaroid {
@@ -156,27 +162,33 @@
     }
     
     .about-decorations {
-        margin-top: 2cm;
+        margin-top: 40px;
         margin-left: 0;
         text-align: center;
+        position: relative;
+        height: 200px;
     }
     
     .decor-items {
-        width: 90%;
-        min-width: 300px;
-        max-width: 400px;
-        margin-top: -25cm;
-        margin-left: 0;
+        width: 120%;
+        min-width: 350px;
+        max-width: 450px;
+        margin-top: 0;
+        margin-left: -10%;
+        position: relative;
+        z-index: 1;
     }
     
     .airplane {
-        width: 70%;
-        min-width: 250px;
-        max-width: 280px;
+        width: 60%;
+        min-width: 200px;
+        max-width: 250px;
         margin-left: 0;
-        margin-top: -8cm;
+        margin-top: -80px;
         left: 50%;
         transform: translateX(-50%);
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -184,7 +196,7 @@
 @media (max-width: 480px) {
     .about-container {
         padding: 30px 2%;
-        transform: translateY(-0.5cm);
+        transform: translateY(-0.3cm);
     }
     
     .about-heading {
@@ -192,16 +204,29 @@
         margin-bottom: 20px;
     }
     
+    .about-flex {
+        gap: 25px;
+    }
+    
+    .about-bubble-wrapper {
+        margin-top: 15px;
+    }
+    
     .bubble-text {
-        font-size: 12px;
-        line-height: 1.5;
-        left: 6%;
-        right: 6%;
+        font-size: 11px;
+        line-height: 1.4;
+        left: 15%;
+        right: 15%;
+        transform: translateY(-55%);
+    }
+    
+    .about-intro {
+        margin-bottom: 8px;
     }
     
     .about-main,
     .about-secondary {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
     
     .about-polaroid {
@@ -211,21 +236,22 @@
     }
     
     .about-decorations {
-        margin-top: 1.5cm;
+        margin-top: 30px;
+        height: 180px;
     }
     
     .decor-items {
-        width: 95%;
-        min-width: 280px;
-        max-width: 350px;
-        margin-top: -20cm;
+        width: 130%;
+        min-width: 300px;
+        max-width: 380px;
+        margin-left: -15%;
     }
     
     .airplane {
-        width: 80%;
-        min-width: 200px;
-        max-width: 250px;
-        margin-top: -6cm;
+        width: 50%;
+        min-width: 180px;
+        max-width: 220px;
+        margin-top: -70px;
     }
 }
 
