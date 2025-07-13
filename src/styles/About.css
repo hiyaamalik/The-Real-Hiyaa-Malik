@@ -166,16 +166,15 @@
     }
     
     .decor-items {
-        width: 32%;
-        max-width: 150px;
-        left: 5%
+        width: 45%;
+        max-width: 200px;
     }
     
     .airplane {
         width: 48%;
         max-width: 85px;
-        top: -20%;
-        left: 5%;
+        top: -50%;
+        left: 8%;
         right: auto;
     }
 }
