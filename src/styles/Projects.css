@@ -1,29 +1,30 @@
 /* Projects Container */
 .projects-container {
   background-color: #f5d7e7;
-  padding: 60px 5%;
+  padding: 40px 3%;
   text-align: center;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -7cm;
+  margin-top: -3cm;
 }
 
 .projects-heading {
-  width: 80%;
+  width: 90%;
   max-width: 700px;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
 }
 
 .projects-subheading {
-  font-size: 16px;
+  font-size: 14px;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: 500;
   text-transform: uppercase;
+  padding: 0 10px;
 }
 
 /* Polaroid Carousel */
@@ -36,12 +37,12 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  gap: 30px;
-  padding: 20px 0;
+  gap: 20px;
+  padding: 15px 10px;
   flex-wrap: nowrap;
   width: 100%;
-  max-width: 1200px;
-  margin-top: -60px;
+  max-width: 100vw;
+  margin-top: -40px;
 }
 
 .polaroid-carousel::-webkit-scrollbar {
@@ -52,14 +53,15 @@
 .project-dots {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  gap: 10px;
+  margin-top: 15px;
+  gap: 8px;
   width: 100%;
+  padding: 0 10px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #ffb6d9;
   border: none;
@@ -75,51 +77,52 @@
 .polaroid-card {
   scroll-snap-align: center;
   flex: 0 0 auto;
-  height: 350px;
-  width: 300px;
+  height: 310px;
+  width: 250px;
   background-color: #fff;
   border: 2px solid #ffb6d9;
   border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
   overflow: hidden;
-  margin: 10px; 
+  margin: 5px;
   box-sizing: border-box;
 }
 
 .polaroid-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 /* Image inside Polaroid card */
 .polaroid-image {
-  width: calc(100% - 20px);
-  height: 200px;
-  margin: 10px;
+  width: calc(100% - 16px);
+  height: 160px;
+  margin: 8px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
+  border-radius: 6px;
 }
 
 /* Caption inside Polaroid card */
 .caption {
-  padding: 10px;
+  padding: 8px 12px;
   font-family: 'Segoe UI', sans-serif;
   color: #444;
 }
 
 .caption h4 {
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px;
   color: #ff69b4;
 }
 
 .caption p {
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
   margin: 0;
+  line-height: 1.4;
 }
 
 /* Modal Overlay */
@@ -134,14 +137,15 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 10px;
 }
 
 .modal-content {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  max-width: 800px;
-  width: 90%;
+  max-width: 90vw;
+  width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -150,14 +154,15 @@
 
 .close-button {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 1.5rem;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
   background: none;
   border: none;
   cursor: pointer;
   color: #ff69b4;
   transition: transform 0.2s;
+  z-index: 10;
 }
 
 .close-button:hover {
@@ -166,7 +171,7 @@
 
 .modal-main-image {
   width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   object-fit: contain;
   margin: 1rem 0;
   border-radius: 8px;
@@ -175,9 +180,9 @@
 
 .extra-images-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 1.5rem 0;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin: 1rem 0;
 }
 
 .extra-image {
@@ -194,47 +199,49 @@
 
 /* Project Details Styling */
 .project-details {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   text-align: left;
 }
 
 .project-details h5 {
-  margin-top: 25px;
-  margin-bottom: 12px;
+  margin-top: 20px;
+  margin-bottom: 8px;
   color: #2c3e50;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .project-details h6 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 6px;
   color: #3498db;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
 .project-details p {
   text-align: justify;
   text-justify: inter-word;
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+  line-height: 1.5;
   color: #444;
+  font-size: 13px;
 }
 
 .project-details ul {
   text-align: justify;
   text-justify: inter-word;
-  margin-bottom: 15px;
-  padding-left: 20px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  line-height: 1.5;
 }
 
 .project-details li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #444;
+  font-size: 13px;
 }
 
 .project-details strong {
@@ -244,94 +251,86 @@
 
 /* Achievements Section */
 .achievements {
-  margin: 1.5rem 0;
-  padding: 1rem;
+  margin: 1rem 0;
+  padding: 0.8rem;
   background-color: #f9f9f9;
   border-radius: 8px;
 }
 
 .achievements h5 {
   color: #ff69b4;
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .achievements ul {
-  padding-left: 1.2rem;
+  padding-left: 1rem;
   text-align: left;
 }
 
 .achievements li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: #555;
+  font-size: 13px;
 }
 
 /* Project Link */
 .project-link {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
   background-color: #ff69b4;
   color: white;
-  border-radius: 30px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
 }
 
 .project-link:hover {
   background-color: #e84393;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Tablet Styles */
+@media (min-width: 768px) {
   .projects-container {
-    padding: 40px 5%;
+    padding: 50px 4%;
     margin-top: -5cm;
   }
   
+  .projects-heading {
+    width: 85%;
+    margin-bottom: 18px;
+  }
+  
+  .projects-subheading {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+  
   .polaroid-carousel {
-    gap: 20px;
-    padding: 15px 0;
+    gap: 25px;
+    padding: 18px 0;
+    margin-top: -50px;
   }
   
   .polaroid-card {
     width: 280px;
-    height: 330px;
+    height: 340px;
   }
   
-  .modal-content {
-    padding: 1.5rem;
-    width: 95%;
+  .polaroid-image {
+    height: 180px;
+    margin: 10px;
   }
   
-  .extra-images-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-details h5 {
-    font-size: 1rem;
-  }
-  
-  .project-details h6 {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-subheading {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-  
-  .polaroid-card {
-    width: 260px;
-    height: 310px;
+  .caption {
+    padding: 10px;
   }
   
   .caption h4 {
@@ -342,8 +341,174 @@
     font-size: 13px;
   }
   
-  .project-details p, 
+  .dot {
+    width: 11px;
+    height: 11px;
+  }
+  
+  .project-dots {
+    gap: 9px;
+    margin-top: 18px;
+  }
+  
+  .modal-content {
+    padding: 1.8rem;
+    max-width: 750px;
+  }
+  
+  .modal-main-image {
+    max-height: 280px;
+  }
+  
+  .extra-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  
+  .project-details h5 {
+    font-size: 1rem;
+    margin-top: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .project-details h6 {
+    font-size: 0.9rem;
+    margin-top: 18px;
+  }
+  
+  .project-details p,
   .project-details li {
     font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .projects-container {
+    padding: 60px 5%;
+    margin-top: -7cm;
+  }
+  
+  .projects-heading {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .projects-subheading {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .polaroid-carousel {
+    gap: 30px;
+    padding: 20px 0;
+    margin-top: -60px;
+    max-width: 1200px;
+  }
+  
+  .polaroid-card {
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+  }
+  
+  .polaroid-image {
+    height: 200px;
+    width: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .caption {
+    padding: 10px;
+  }
+  
+  .caption h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .caption p {
+    font-size: 14px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .project-dots {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .modal-content {
+    padding: 2rem;
+    max-width: 800px;
+  }
+  
+  .modal-main-image {
+    max-height: 300px;
+  }
+  
+  .close-button {
+    font-size: 1.5rem;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .project-details h5 {
+    font-size: 1.1rem;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+  
+  .project-details h6 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .project-details p,
+  .project-details li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .project-details ul {
+    padding-left: 20px;
+  }
+  
+  .project-details li {
+    margin-bottom: 8px;
+  }
+  
+  .achievements {
+    margin: 1.5rem 0;
+    padding: 1rem;
+  }
+  
+  .achievements h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .achievements ul {
+    padding-left: 1.2rem;
+  }
+  
+  .achievements li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+  }
+  
+  .project-link {
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
   }
 }

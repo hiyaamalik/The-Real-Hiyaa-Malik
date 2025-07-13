@@ -1,32 +1,32 @@
+/* Mobile-First Powers Section */
 .powers-section {
   background-color: #f5d7e7;
   text-align: center;
-  padding: 33px 0;
-  margin-top: -1cm;
+  padding: 30px 3%;
+  margin-top: -0.5cm;
 }
 
 .powers-heading {
-  width: 60%;
-  margin: 0 auto 40px;
+  width: 90%;
+  margin: 0 auto 30px;
   display: block;
 }
 
 .powers-grid {
-  display: grid;
-  grid-template-columns: 1fr 15% 1fr;
-  grid-template-rows: auto auto;
-  gap: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   align-items: center;
-  justify-items: center;
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* Note cards */
+/* Note cards - Mobile First */
 .note-card {
   position: relative;
   width: 100%;
-  max-width: 380px;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .note-frame {
@@ -37,74 +37,259 @@
 .note-text {
   position: absolute;
   top: 20%;
-  left: 10%;
-  right: 10%;
-  font-size: 16px;
-  line-height: 1.8;
+  left: 12%;
+  right: 12%;
+  font-size: 14px;
+  line-height: 1.6;
   text-align: justify;
   color: #333;
 }
 
 .note-text h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 
 .note-text ul {
   padding-left: 0;
   margin: 0;
-  list-style-type: none; /* Removes the bullet points */
+  list-style-type: none;
 }
 
 .note-text li {
-  margin-bottom: 10px; /* Adds space between the items */
-  line-height: 1.8; /* Adjust line spacing for readability */
-  text-align: justify; /* Ensures the text is aligned properly */
+  margin-bottom: 8px;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-
-/* Girl image centered */
+/* Girl image - Mobile */
 .girl-wrapper {
-  grid-row: 1 / span 2;
-  grid-column: 2 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 3; /* Place girl image in the middle on mobile */
 }
 
 .powers-girl {
-  width: 100%;
-  max-width: 400px;
-  min-width: 400px;
+  width: 80%;
+  max-width: 300px;
+  min-width: 250px;
 }
 
-/* Top notes slightly inward */
+/* Mobile note positioning */
 .top-left,
-.top-right {
+.top-right,
+.bottom-left,
+.bottom-right {
   justify-self: center;
+  margin: 0;
 }
 
-/* Bottom notes fully shifted to corners */
+.top-left {
+  order: 1;
+}
+
+.top-right {
+  order: 2;
+}
+
 .bottom-left {
-  justify-self: start;
-  margin-left: -80px;
+  order: 4;
 }
 
 .bottom-right {
-  justify-self: end;
-  margin-right: -80px;
+  order: 5;
 }
 
-/* Hover effect for text inside the note card */
+/* Hover effect */
 .note-text {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .note-card:hover .note-text {
-  transform: translateY(-10px); /* Slight upward movement */
-  color: #333; /* Change text color on hover, adjust as needed */
+  transform: translateY(-5px);
+  color: #333;
 }
 
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .powers-section {
+    padding: 40px 4%;
+    margin-top: -0.8cm;
+  }
+
+  .powers-heading {
+    width: 70%;
+    margin-bottom: 35px;
+  }
+
+  .powers-grid {
+    display: grid;
+    grid-template-columns: 1fr 20% 1fr;
+    grid-template-rows: auto auto;
+    gap: 35px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .note-card {
+    max-width: 320px;
+  }
+
+  .note-text {
+    font-size: 15px;
+    line-height: 1.7;
+    left: 11%;
+    right: 11%;
+  }
+
+  .note-text h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .note-text li {
+    margin-bottom: 9px;
+    line-height: 1.7;
+  }
+
+  .girl-wrapper {
+    grid-row: 1 / span 2;
+    grid-column: 2 / 3;
+    order: initial;
+  }
+
+  .powers-girl {
+    width: 100%;
+    max-width: 300px;
+    min-width: 280px;
+  }
+
+  .top-left,
+  .top-right {
+    justify-self: center;
+    order: initial;
+  }
+
+  .bottom-left {
+    justify-self: start;
+    margin-left: -40px;
+    order: initial;
+  }
+
+  .bottom-right {
+    justify-self: end;
+    margin-right: -40px;
+    order: initial;
+  }
+
+  .note-card:hover .note-text {
+    transform: translateY(-8px);
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .powers-section {
+    padding: 33px 0;
+    margin-top: -1cm;
+  }
+
+  .powers-heading {
+    width: 60%;
+    margin-bottom: 40px;
+  }
+
+  .powers-grid {
+    grid-template-columns: 1fr 15% 1fr;
+    gap: 40px 40px;
+  }
+
+  .note-card {
+    max-width: 380px;
+  }
+
+  .note-text {
+    font-size: 16px;
+    line-height: 1.8;
+    left: 10%;
+    right: 10%;
+  }
+
+  .note-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .note-text li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+  }
+
+  .powers-girl {
+    max-width: 400px;
+    min-width: 400px;
+  }
+
+  .bottom-left {
+    margin-left: -80px;
+  }
+
+  .bottom-right {
+    margin-right: -80px;
+  }
+
+  .note-card:hover .note-text {
+    transform: translateY(-10px);
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+  .powers-section {
+    padding: 25px 2%;
+  }
+
+  .powers-heading {
+    width: 95%;
+    margin-bottom: 25px;
+  }
+
+  .powers-grid {
+    gap: 25px;
+  }
+
+  .note-card {
+    max-width: 300px;
+  }
+
+  .note-text {
+    font-size: 12px;
+    line-height: 1.5;
+    left: 15%;
+    right: 15%;
+  }
+
+  .note-text h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .note-text li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+
+  .powers-girl {
+    width: 90%;
+    max-width: 250px;
+    min-width: 200px;
+  }
+
+  .note-card:hover .note-text {
+    transform: translateY(-3px);
+  }
+}

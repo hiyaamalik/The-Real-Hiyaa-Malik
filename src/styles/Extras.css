@@ -1,54 +1,173 @@
+/* Mobile First - Extras Section */
 .extras-section {
     background-color: #f5d7e7;
-    
     text-align: center;
-    margin-top: -7cm,
-  }
-  
-  .extras-heading {
-    width: 100%;
+    padding: 30px 3%;
+    margin-top: -2cm;
+}
+
+.extras-heading {
+    width: 90%;
     max-width: 750px;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
     display: block;
-  }
-  
-  .extras-grid {
+}
+
+.extras-grid {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 1fr;
     justify-content: center;
-    align-items: end; /* Align all images to the bottom line */
-    gap: 40px;
-    margin-top: 30px;
-  }
-  
-  .extra-card {
-    width: 7cm;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.extra-card {
+    width: 80%;
+    max-width: 250px;
+    margin: 0 auto;
     cursor: pointer;
     background: none;
     padding: 0;
     box-shadow: none;
     border-radius: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .extra-card:first-child {
-    width: 8.1cm; /* Slightly larger for the first image */
-  }
-  
-  .extra-card:nth-child(2) {
-    align-self: end; /* Push second image to bottom */
-  }
-  
-  .extra-card img {
+}
+
+.extra-card:first-child {
+    width: 85%;
+    max-width: 280px;
+}
+
+.extra-card img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .extra-card:hover img {
+}
+
+.extra-card:hover img {
     transform: scale(1.03);
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
-  }
-  
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .extras-section {
+        padding: 25px 2%;
+        margin-top: -1.5cm;
+    }
+    
+    .extras-heading {
+        width: 95%;
+        margin-bottom: 25px;
+    }
+    
+    .extras-grid {
+        gap: 20px;
+        margin-top: 15px;
+    }
+    
+    .extra-card {
+        width: 90%;
+        max-width: 220px;
+    }
+    
+    .extra-card:first-child {
+        width: 95%;
+        max-width: 250px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .extras-section {
+        padding: 40px 4%;
+        margin-top: -4cm;
+    }
+    
+    .extras-heading {
+        width: 85%;
+        margin-bottom: 35px;
+    }
+    
+    .extras-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        margin-top: 25px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .extra-card {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .extra-card:first-child {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .extra-card:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .extras-section {
+        padding: 50px 5%;
+        margin-top: -7cm;
+    }
+    
+    .extras-heading {
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto 40px;
+    }
+    
+    .extras-grid {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        align-items: end;
+        gap: 40px;
+        margin-top: 30px;
+        max-width: none;
+    }
+    
+    .extra-card {
+        width: 7cm;
+        max-width: none;
+        margin: 0;
+    }
+    
+    .extra-card:first-child {
+        width: 8.1cm;
+        max-width: none;
+    }
+    
+    .extra-card:nth-child(2) {
+        align-self: end;
+    }
+    
+    .extra-card:nth-child(3) {
+        grid-column: auto;
+        justify-self: auto;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .extras-section {
+        margin-top: -7cm;
+    }
+    
+    .extras-grid {
+        gap: 50px;
+    }
+}
