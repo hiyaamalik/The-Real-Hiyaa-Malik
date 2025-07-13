@@ -174,8 +174,8 @@
         width: 48%;
         max-width: 100px;
         top: -50%;
-        left: 0;
-        right: -100px;
+        left: -1cm;
+        right: auto;
     }
 }
 
