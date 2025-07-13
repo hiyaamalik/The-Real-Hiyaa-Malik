@@ -4,16 +4,16 @@
     text-align: center;
     position: relative;
     transform: translateY(-1.9cm);
-  }
-  
+}
+
 .about-heading {
     width: 80%;
     max-width: 800px;
     margin: 0 auto 50px;
     display: block;
 }
-  
-  .about-flex {
+
+.about-flex {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -21,90 +21,245 @@
     gap: 4%;
     max-width: 100%;
     margin: 0 auto;
-  }
-  
-  /* Text Bubble Area */
-  .about-bubble-wrapper {
+}
+
+/* Text Bubble Area */
+.about-bubble-wrapper {
     position: relative;
     width: 62%;
-  }
-  
-  .dialogue-bubble {
+}
+
+.dialogue-bubble {
     width: 100%;
     display: block;
     transform: translateY(-2cm);
-  }
-  
-  .bubble-text {
+}
+
+.bubble-text {
     position: absolute;
     top: 50%;
     left: 10%;
     right: 10%;
-    transform: translateY(-70%); /* This will vertically center the text */
+    transform: translateY(-70%);
     font-size: 16px;
     line-height: 1.7;
     text-align: left;
     font-weight: 500;
     color: #222;
-  }
-  
-  .about-intro {
+}
+
+.about-intro {
     font-style: italic;
     margin-bottom: 12px;
-  }
-  
-  .about-main,
-  .about-secondary {
+}
+
+.about-main,
+.about-secondary {
     text-transform: uppercase;
     margin-bottom: 18px;
-  }
-  
-  /* Polaroid Image */
-  .about-polaroid {
+}
+
+/* Polaroid Image */
+.about-polaroid {
     width: 50%;
     min-width: 280px;
     max-width: 380px;
     margin-top: -1.5cm;
     border-radius: 10px;
-  }
-  
-  /* Decorative Items */
-  /* Airplane */
+}
+
+/* Decorative Items */
+.about-decorations {
+    margin-top: 4.3cm; 
+    position: relative;
+    text-align: left;
+    margin-left: 1cm;
+}
+
+/* Airplane */
 .airplane {
     width: 80%;
     min-width: 370px;
     max-width: 370px;
-    margin-left: -1.5%; /* Shift left by 3cm (adjusted from 2% to -1%) */
-    margin-top: -12cm; /* Move the plane 2cm down */
+    margin-left: -1.5%;
+    margin-top: -12cm;
     position: absolute;
-  }
-  
-  /* Decorative Items */
-  .about-decorations {
-    margin-top: 4.3cm; 
-    position: relative;
-    text-align: left;
-    margin-left: 1cm; /* Shift left by 3cm (adjusted from 4cm to 1cm) */
-  }
-  
-  /* Shift decor items to the left by 3cm */
-  .decor-items {
+}
+
+/* Decorative Items */
+.decor-items {
     width: 100%;
     min-width: 600px;
     max-width: 600px;
     margin-top: -51cm;
-    margin-left: -2cm; /* Shift decor items 3cm to the left */
-  }
-   /* Initial state */
+    margin-left: -2cm;
+}
+
+/* Animation styles */
 .about-polaroid {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     transition: all 0.6s ease-out;
-  }
-  
-  /* When in view */
-  .about-polaroid.reveal {
+}
+
+.about-polaroid.reveal {
     opacity: 1;
     transform: translateY(0) scale(1);
-  }
-  
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 40px 3%;
+        transform: translateY(-1cm);
+    }
+    
+    .about-heading {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    
+    .about-flex {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .about-bubble-wrapper {
+        width: 100%;
+        order: 2;
+    }
+    
+    .dialogue-bubble {
+        transform: translateY(-1cm);
+    }
+    
+    .bubble-text {
+        font-size: 14px;
+        line-height: 1.6;
+        left: 8%;
+        right: 8%;
+        transform: translateY(-65%);
+    }
+    
+    .about-main,
+    .about-secondary {
+        margin-bottom: 15px;
+    }
+    
+    .about-polaroid {
+        width: 70%;
+        min-width: 250px;
+        max-width: 300px;
+        margin-top: 0;
+        order: 1;
+    }
+    
+    .about-decorations {
+        margin-top: 2cm;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .decor-items {
+        width: 90%;
+        min-width: 300px;
+        max-width: 400px;
+        margin-top: -25cm;
+        margin-left: 0;
+    }
+    
+    .airplane {
+        width: 70%;
+        min-width: 250px;
+        max-width: 280px;
+        margin-left: 0;
+        margin-top: -8cm;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 30px 2%;
+        transform: translateY(-0.5cm);
+    }
+    
+    .about-heading {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    
+    .bubble-text {
+        font-size: 12px;
+        line-height: 1.5;
+        left: 6%;
+        right: 6%;
+    }
+    
+    .about-main,
+    .about-secondary {
+        margin-bottom: 12px;
+    }
+    
+    .about-polaroid {
+        width: 80%;
+        min-width: 200px;
+        max-width: 250px;
+    }
+    
+    .about-decorations {
+        margin-top: 1.5cm;
+    }
+    
+    .decor-items {
+        width: 95%;
+        min-width: 280px;
+        max-width: 350px;
+        margin-top: -20cm;
+    }
+    
+    .airplane {
+        width: 80%;
+        min-width: 200px;
+        max-width: 250px;
+        margin-top: -6cm;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-container {
+        padding: 50px 4%;
+    }
+    
+    .about-bubble-wrapper {
+        width: 58%;
+    }
+    
+    .about-polaroid {
+        width: 45%;
+        min-width: 260px;
+        max-width: 320px;
+    }
+    
+    .bubble-text {
+        font-size: 15px;
+    }
+    
+    .decor-items {
+        width: 90%;
+        min-width: 500px;
+        max-width: 550px;
+        margin-top: -45cm;
+    }
+    
+    .airplane {
+        width: 75%;
+        min-width: 320px;
+        max-width: 350px;
+        margin-top: -10cm;
+    }
+}
