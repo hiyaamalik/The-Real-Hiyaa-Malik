@@ -167,7 +167,7 @@
     
     .decor-items {
         width: 32%;
-        max-width: 100px;
+        max-width: 150px;
         left: 5%
     }
     
@@ -175,7 +175,8 @@
         width: 48%;
         max-width: 85px;
         top: -20%;
-        right: 5%
+        left: 5%;
+        right: auto;
     }
 }
 
