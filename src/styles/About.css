@@ -1,48 +1,57 @@
 .about-container {
     background-color: #f5d7e7;
-    padding: 60px 5%;
+    padding: 40px 3%;
     text-align: center;
     position: relative;
-    transform: translateY(-1.9cm);
+    overflow-x: hidden;
 }
 
 .about-heading {
-    width: 80%;
+    width: 90%;
     max-width: 800px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
     display: block;
 }
 
 .about-flex {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 4%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* Text Bubble Area */
+/* Polaroid Image - Mobile First */
+.about-polaroid {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    order: 1;
+    margin: 0 auto;
+}
+
+/* Text Bubble Area - Mobile First */
 .about-bubble-wrapper {
     position: relative;
-    width: 62%;
+    width: 100%;
+    order: 2;
+    margin: 20px 0;
 }
 
 .dialogue-bubble {
     width: 100%;
     display: block;
-    transform: translateY(-2cm);
 }
 
 .bubble-text {
     position: absolute;
     top: 50%;
-    left: 10%;
-    right: 10%;
-    transform: translateY(-70%);
-    font-size: 16px;
-    line-height: 1.7;
+    left: 15%;
+    right: 15%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    line-height: 1.4;
     text-align: left;
     font-weight: 500;
     color: #222;
@@ -50,49 +59,41 @@
 
 .about-intro {
     font-style: italic;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .about-main,
 .about-secondary {
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
-/* Polaroid Image */
-.about-polaroid {
-    width: 50%;
-    min-width: 280px;
-    max-width: 380px;
-    margin-top: -1.5cm;
-    border-radius: 10px;
-}
-
-/* Decorative Items */
+/* Decorative Items - Mobile First */
 .about-decorations {
-    margin-top: 4.3cm; 
     position: relative;
-    text-align: left;
-    margin-left: 1cm;
-}
-
-/* Airplane */
-.airplane {
-    width: 80%;
-    min-width: 370px;
-    max-width: 370px;
-    margin-left: -1.5%;
-    margin-top: -12cm;
-    position: absolute;
-}
-
-/* Decorative Items */
-.decor-items {
     width: 100%;
-    min-width: 600px;
-    max-width: 600px;
-    margin-top: -51cm;
-    margin-left: -2cm;
+    height: 150px;
+    margin-top: 40px;
+}
+
+.decor-items {
+    position: absolute;
+    width: 100%;
+    max-width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
+}
+
+.airplane {
+    position: absolute;
+    width: 60%;
+    max-width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    z-index: 2;
 }
 
 /* Animation styles */
@@ -107,185 +108,147 @@
     transform: translateY(0) scale(1);
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 40px 3%;
-        transform: translateY(-0.5cm);
-        overflow-x: hidden;
-    }
-    
-    .about-heading {
-        width: 90%;
-        margin-bottom: 30px;
-    }
-    
-    .about-flex {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-    }
-    
-    .about-bubble-wrapper {
-        width: 100%;
-        order: 2;
-        margin-top: 20px;
-    }
-    
-    .dialogue-bubble {
-        transform: translateY(0);
-    }
-    
-    .bubble-text {
-        font-size: 13px;
-        line-height: 1.5;
-        left: 12%;
-        right: 12%;
-        transform: translateY(-60%);
-    }
-    
-    .about-intro {
-        margin-bottom: 10px;
-    }
-    
-    .about-main,
-    .about-secondary {
-        margin-bottom: 12px;
-    }
-    
-    .about-polaroid {
-        width: 70%;
-        min-width: 250px;
-        max-width: 300px;
-        margin-top: 0;
-        order: 1;
-    }
-    
-    .about-decorations {
-        margin-top: 40px;
-        margin-left: 0;
-        text-align: center;
-        position: relative;
-        height: 200px;
-    }
-    
-    .decor-items {
-        width: 120%;
-        min-width: 350px;
-        max-width: 450px;
-        margin-top: 0;
-        margin-left: -10%;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .airplane {
-        width: 60%;
-        min-width: 200px;
-        max-width: 250px;
-        margin-left: 0;
-        margin-top: -80px;
-        left: 50%;
-        transform: translateX(-50%);
-        position: relative;
-        z-index: 2;
-    }
-}
-
-/* Small Mobile Phones */
-@media (max-width: 480px) {
-    .about-container {
-        padding: 30px 2%;
-        transform: translateY(-0.3cm);
-    }
-    
-    .about-heading {
-        width: 95%;
-        margin-bottom: 20px;
-    }
-    
-    .about-flex {
-        gap: 25px;
-    }
-    
-    .about-bubble-wrapper {
-        margin-top: 15px;
-    }
-    
-    .bubble-text {
-        font-size: 11px;
-        line-height: 1.4;
-        left: 15%;
-        right: 15%;
-        transform: translateY(-55%);
-    }
-    
-    .about-intro {
-        margin-bottom: 8px;
-    }
-    
-    .about-main,
-    .about-secondary {
-        margin-bottom: 10px;
-    }
-    
-    .about-polaroid {
-        width: 80%;
-        min-width: 200px;
-        max-width: 250px;
-    }
-    
-    .about-decorations {
-        margin-top: 30px;
-        height: 180px;
-    }
-    
-    .decor-items {
-        width: 130%;
-        min-width: 300px;
-        max-width: 380px;
-        margin-left: -15%;
-    }
-    
-    .airplane {
-        width: 50%;
-        min-width: 180px;
-        max-width: 220px;
-        margin-top: -70px;
-    }
-}
-
 /* Tablet Styles */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .about-container {
         padding: 50px 4%;
+        transform: translateY(-1cm);
+    }
+    
+    .about-heading {
+        width: 85%;
+        margin-bottom: 40px;
+    }
+    
+    .about-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 4%;
     }
     
     .about-bubble-wrapper {
         width: 58%;
+        order: 1;
+        margin: 0;
     }
     
-    .about-polaroid {
-        width: 45%;
-        min-width: 260px;
-        max-width: 320px;
+    .dialogue-bubble {
+        transform: translateY(-1.5cm);
     }
     
     .bubble-text {
         font-size: 15px;
+        line-height: 1.6;
+        left: 10%;
+        right: 10%;
+        transform: translateY(-65%);
+    }
+    
+    .about-main,
+    .about-secondary {
+        margin-bottom: 15px;
+    }
+    
+    .about-polaroid {
+        width: 40%;
+        max-width: 320px;
+        margin-top: -1cm;
+        order: 2;
+    }
+    
+    .about-decorations {
+        margin-top: 3cm;
+        height: 300px;
     }
     
     .decor-items {
-        width: 90%;
-        min-width: 500px;
-        max-width: 550px;
-        margin-top: -45cm;
+        width: 80%;
+        max-width: 500px;
+        top: -200px;
+        left: 10%;
+        transform: none;
     }
     
     .airplane {
-        width: 75%;
-        min-width: 320px;
-        max-width: 350px;
-        margin-top: -10cm;
+        width: 50%;
+        max-width: 300px;
+        top: -150px;
+        left: 60%;
+        transform: none;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .about-container {
+        padding: 60px 5%;
+        transform: translateY(-1.9cm);
+    }
+    
+    .about-heading {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    
+    .about-bubble-wrapper {
+        width: 62%;
+    }
+    
+    .dialogue-bubble {
+        transform: translateY(-2cm);
+    }
+    
+    .bubble-text {
+        font-size: 16px;
+        line-height: 1.7;
+        transform: translateY(-70%);
+    }
+    
+    .about-intro {
+        margin-bottom: 12px;
+    }
+    
+    .about-main,
+    .about-secondary {
+        margin-bottom: 18px;
+    }
+    
+    .about-polaroid {
+        width: 50%;
+        min-width: 280px;
+        max-width: 380px;
+        margin-top: -1.5cm;
+    }
+    
+    .about-decorations {
+        margin-top: 4.3cm;
+        text-align: left;
+        margin-left: 1cm;
+        height: auto;
+    }
+    
+    .decor-items {
+        width: 100%;
+        min-width: 600px;
+        max-width: 600px;
+        margin-top: -51cm;
+        margin-left: -2cm;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+    
+    .airplane {
+        width: 80%;
+        min-width: 370px;
+        max-width: 370px;
+        margin-left: -1.5%;
+        margin-top: -12cm;
+        position: absolute;
+        top: auto;
+        left: auto;
+        transform: none;
     }
 }

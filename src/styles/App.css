@@ -1,65 +1,248 @@
-/* App Container */
+/* App Container - Mobile First */
 .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
     min-height: 100vh;
-  }
-  
-  /* Heading and title section */
-  .App h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .App h2 {
+}
+
+/* Heading and title section - Mobile First */
+.App h1 {
     font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.App h2 {
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 10px;
-  }
-  
-  /* General Section Styling */
-  section {
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* General Section Styling - Mobile First */
+section {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-  }
-  
-  /* Styling for Navigation buttons (if needed) */
-  .nav-buttons {
+    padding: 0 5px;
+}
+
+/* Navigation buttons - Mobile First */
+.nav-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     margin-top: 20px;
-  }
-  
-  .nav-buttons button {
+    width: 100%;
+}
+
+.nav-buttons button {
     background-color: #f5d7e7;
     color: #333;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .nav-buttons button:hover {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.nav-buttons button:hover {
     background-color: #e7a9c8;
-  }
-  
-  /* Footer Styling */
-  footer {
-    padding: 10px 0;
+}
+
+.nav-buttons button:active {
+    background-color: #d999b8;
+}
+
+/* Footer Styling - Mobile First */
+footer {
+    padding: 15px 10px;
     text-align: center;
     background-color: #f5d7e7;
     margin-top: 20px;
-  }
-  
-  footer p {
+    width: 100%;
+}
+
+footer p {
     color: #555;
-    font-size: 0.9rem;
-  }
-  
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .App {
+        padding: 20px;
+    }
+    
+    .App h1 {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+    
+    .App h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+    
+    section {
+        max-width: 900px;
+        padding: 0 10px;
+    }
+    
+    .nav-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .nav-buttons button {
+        width: auto;
+        min-width: 150px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    footer {
+        padding: 12px 0;
+    }
+    
+    footer p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .App {
+        padding: 20px;
+    }
+    
+    .App h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .App h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    section {
+        max-width: 1200px;
+        padding: 0;
+    }
+    
+    .nav-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    
+    .nav-buttons button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        min-width: 120px;
+    }
+    
+    footer {
+        padding: 10px 0;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+    .App {
+        padding: 25px;
+    }
+    
+    .App h1 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .App h2 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    
+    section {
+        max-width: 1400px;
+    }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+    .App {
+        padding: 10px;
+    }
+    
+    .App h1 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .App h2 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    section {
+        padding: 0 2px;
+    }
+    
+    .nav-buttons {
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .nav-buttons button {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        max-width: 280px;
+    }
+    
+    footer {
+        padding: 12px 8px;
+        margin-top: 15px;
+    }
+    
+    footer p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Accessibility and Touch Improvements */
+@media (hover: none) and (pointer: coarse) {
+    .nav-buttons button {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    .nav-buttons button:hover {
+        background-color: #f5d7e7;
+    }
+    
+    .nav-buttons button:active {
+        background-color: #e7a9c8;
+    }
+}
