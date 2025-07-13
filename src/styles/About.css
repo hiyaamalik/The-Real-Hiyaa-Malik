@@ -171,10 +171,10 @@
     }
     
     .airplane {
-        width: 48%;
-        max-width: 100px;
+        width: 45%;
+        max-width: 90px;
         top: -50%;
-        left: -1cm;
+        left: -2cm;
         right: auto;
     }
 }
