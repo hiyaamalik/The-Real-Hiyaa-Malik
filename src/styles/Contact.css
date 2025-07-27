@@ -1,4 +1,4 @@
-/* MOBILE-FIRST APPROACH */
+/* MOBILE-FIRST APPROACH - UPDATED TO MATCH LAPTOP LAYOUT */
 .contact-section {
     position: relative;
     padding: 20px;
@@ -29,9 +29,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column; /* Default to column for mobile */
+    flex-direction: row; /* Horizontal layout like laptop */
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px; /* Smaller gap for mobile */
+    width: 100%;
 }
 
 .contact-links a, 
@@ -39,22 +41,23 @@
     color: #0a0000;
     display: inline-block;
     margin: 0;
-    text-decoration: underline;
+    text-decoration: none; /* No underline like laptop */
     font-size: 1rem;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     font-family: inherit;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .contact-links a:hover, 
 .modal-btn:hover {
     color: #cc006d;
-    text-decoration: underline;
+    text-decoration: underline; /* Underline only on hover like laptop */
 }
 
-/* TABLET STYLES */
+/* TABLET STYLES - COMPLETELY UNCHANGED */
 @media (min-width: 768px) {
     .contact-section {
         padding: 10px;
@@ -72,12 +75,12 @@
     }
     
     .contact-links {
-        flex-direction: row; /* Horizontal for tablet+ */
+        flex-direction: row;
         gap: 60px;
     }
 }
 
-/* DESKTOP STYLES - ORIGINAL LAYOUT */
+/* DESKTOP STYLES - COMPLETELY UNCHANGED */
 @media (min-width: 1024px) {
     .contact-section {
         padding: 2px;
@@ -112,7 +115,7 @@
     }
 }
 
-/* MODAL STYLES (unchanged) */
+/* MODAL STYLES - COMPLETELY UNCHANGED */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -174,7 +177,7 @@
     background-color: #d65a92;
 }
 
-/* Desktop Modal Adjustments */
+/* Desktop Modal Adjustments - UNCHANGED */
 @media (min-width: 1024px) {
     .modal-content {
         max-width: 500px;
