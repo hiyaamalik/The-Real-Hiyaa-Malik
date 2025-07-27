@@ -1,15 +1,9 @@
-/* MOBILE-FIRST APPROACH - FINAL ADJUSTMENTS */
+/* MOBILE-FIRST APPROACH - FINAL POSITION ADJUSTMENT */
 .contact-section {
     position: relative;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
-}
-
-.contact-heading {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto 20px;
 }
 
 .contact-wrapper {
@@ -25,14 +19,14 @@
 
 .contact-links {
     position: absolute;
-    top: 65%; /* Shifted down from 50% */
+    top: 75%; /* Increased from 65% to ~1cm lower */
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Slightly reduced gap */
+    gap: 15px;
     width: 100%;
 }
 
@@ -42,7 +36,7 @@
     display: inline-block;
     margin: 0;
     text-decoration: none;
-    font-size: 0.9rem; /* Reduced from 1rem */
+    font-size: 0.9rem;
     background: none;
     border: none;
     padding: 0;
@@ -51,11 +45,6 @@
     white-space: nowrap;
 }
 
-.contact-links a:hover, 
-.modal-btn:hover {
-    color: #cc006d;
-    text-decoration: underline;
-}
 
 /* TABLET STYLES - 100% UNCHANGED */
 @media (min-width: 768px) {
