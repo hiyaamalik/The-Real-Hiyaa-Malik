@@ -48,12 +48,18 @@ const styles = {
     padding: '0 20px',
     fontFamily: 'inherit',
     textAlign: 'center',
+    '@media (max-width: 768px)': {
+      padding: '0 15px',
+    },
   },
   bannerContainer: {
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     margin: '0 auto 20px',
+    '@media (max-width: 768px)': {
+      margin: '0 auto 15px',
+    },
   },
   bannerImage: {
     width: '75%',
@@ -61,7 +67,7 @@ const styles = {
     height: 'auto',
     display: 'block',
     '@media (max-width: 768px)': {
-      width: '90%',
+      width: '100%',
     },
   },
   navContainer: {
@@ -71,7 +77,9 @@ const styles = {
     marginBottom: '40px',
     marginTop: '-60px',
     '@media (max-width: 768px)': {
-      marginTop: '-30px',
+      marginTop: '-20px',
+      marginBottom: '30px',
+      borderTop: 'none',
     },
   },
   navBar: {
@@ -83,9 +91,11 @@ const styles = {
     padding: '15px 0',
     overflowX: 'auto',
     '@media (max-width: 768px)': {
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      padding: '10px 0',
+      flexWrap: 'nowrap',
+      justifyContent: 'flex-start',
+      padding: '12px 0',
+      overflowX: 'scroll',
+      '-webkit-overflow-scrolling': 'touch',
     },
   },
   navLink: {
@@ -96,12 +106,16 @@ const styles = {
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
     whiteSpace: 'nowrap',
-    padding: '0 10px',
+    padding: '0 15px',
     fontFamily: 'inherit',
+    transition: 'color 0.3s ease',
     '@media (max-width: 768px)': {
-      fontSize: '0.8rem',
-      padding: '5px 8px',
-      margin: '0 5px',
+      fontSize: '0.75rem',
+      padding: '0 12px',
+      flexShrink: 0,
+    },
+    '&:hover': {
+      color: '#cc006d',
     },
   },
   textContainer: {
@@ -110,7 +124,7 @@ const styles = {
     margin: '-10px auto 50px',
     '@media (max-width: 768px)': {
       margin: '0 auto 30px',
-      padding: '0 15px',
+      padding: '0',
     },
   },
   leadText: {
@@ -122,6 +136,8 @@ const styles = {
     '@media (max-width: 768px)': {
       fontSize: '1rem',
       marginBottom: '15px',
+      lineHeight: '1.5',
+      textAlign: 'left',
     },
   },
   mainText: {
@@ -136,6 +152,17 @@ const styles = {
       lineHeight: '1.5',
     },
   },
+  // Added mobile-specific utility class
+  mobileOnly: {
+    '@media (min-width: 769px)': {
+      display: 'none',
+    },
+  },
+  desktopOnly: {
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+  }
 };
 
 export default Hero;

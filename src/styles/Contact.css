@@ -104,7 +104,7 @@
 
     .contact-links a, 
     .modal-btn {
-        margin: 95px;
+        margin: 85px;
         margin-top: 8.5cm;
         text-decoration: none;
         font-size: 1rem; /* Reset to original */
@@ -182,11 +182,11 @@
 @media (min-width: 1024px) {
     .modal-content {
         max-width: 500px;
-        padding: 2rem;
+        padding: 1rem;
     }
     
     .contact-form button {
         width: auto;
-        min-width: 120px;
+        min-width: 100px;
     }
 }
