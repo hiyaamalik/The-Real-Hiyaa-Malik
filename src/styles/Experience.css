@@ -1,13 +1,13 @@
 /* Mobile-First Base Styles */
 .experience-section {
     background-color: #f5d7e7;
-    padding: 30px 15px;
+    padding: 40px 15px;
     text-align: center;
 }
 
 .experience-heading {
     width: 90%;
-    margin: 0 auto 25px;
+    margin: 0 auto 30px;
     display: block;
 }
 
@@ -22,9 +22,9 @@
 
 /* Girl image - Mobile */
 .work-girl {
-    width: 85%;
-    max-width: 300px;
-    margin: 0 auto 25px;
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto 30px;
     order: 1;
 }
 
@@ -32,67 +32,65 @@
 .timeline {
     position: relative;
     width: 100%;
-    padding-left: 0;
+    padding-left: 20px; /* Added padding for left-aligned line */
     order: 2;
-    margin-top: 20px;
 }
 
-/* Vertical line - Mobile (centered) */
+/* Vertical line - Mobile (left-aligned) */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px; /* Changed from 50% to fixed position */
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: 4px;
     background-color: hotpink;
     z-index: 0;
+    transform: none; /* Removed centering transform */
 }
 
 /* Timeline items - Mobile */
 .timeline-item {
     position: relative;
-    padding: 0 15px;
-    margin-bottom: 35px;
+    padding: 0 20px 0 40px; /* Adjusted padding for left alignment */
+    margin-bottom: 40px;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
-    text-align: center;
-    width: 100%;
+    text-align: left; /* Changed from center to left */
 }
 
-/* Star positioning - Mobile (centered on line) */
+/* Star positioning - Mobile (left-aligned) */
 .star {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -18px;
+    left: 0; /* Changed from 50% to left */
+    transform: translateX(-50%); /* Kept for perfect alignment */
+    top: -20px;
     z-index: 2;
 }
 
 /* Content - Mobile */
 .timeline-content {
-    text-align: center;
-    margin-top: 25px;
+    text-align: left; /* Changed from center to left */
+    margin-top: 30px;
     padding: 0 10px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .timeline-content h3 {
-    margin: 0 0 6px;
-    font-size: 1rem;
+    margin: 0 0 8px;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 .timeline-content p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     color: #444;
-    margin: 0;
+    text-align: left; /* Added for consistency */
 }
 
 /* Reveal animation */
@@ -101,22 +99,7 @@
     transform: translateY(0);
 }
 
-/* Small Mobile Phones */
-@media (max-width: 360px) {
-    .experience-section {
-        padding: 25px 10px;
-    }
-    
-    .timeline-content h3 {
-        font-size: 0.95rem;
-    }
-    
-    .timeline-content p {
-        font-size: 0.8rem;
-    }
-}
-
-/* Tablet Styles (unchanged from your original) */
+/* Tablet Styles (unchanged) */
 @media (min-width: 768px) {
     .experience-section {
         padding: 50px 20px;
@@ -145,7 +128,6 @@
         width: 55%;
         padding-left: 30px;
         order: 2;
-        margin-top: 0;
     }
     
     .timeline::before {
@@ -153,7 +135,6 @@
         transform: none;
         top: 7px;
         bottom: 40px;
-        width: 4px;
     }
     
     .timeline-item {
@@ -187,7 +168,7 @@
     }
 }
 
-/* Desktop Styles (unchanged from your original) */
+/* Desktop Styles (unchanged) */
 @media (min-width: 1024px) {
     .experience-section {
         padding: 60px 20px;
@@ -248,5 +229,57 @@
     .timeline-content p {
         font-size: 1rem;
         line-height: 1.6;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .experience-section {
+        padding: 30px 10px;
+    }
+    
+    .experience-heading {
+        width: 95%;
+        margin-bottom: 25px;
+    }
+    
+    .work-girl {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 25px;
+    }
+    
+    .timeline {
+        padding-left: 15px; /* Adjusted for small screens */
+    }
+    
+    .timeline::before {
+        left: 15px; /* Adjusted for small screens */
+    }
+    
+    .timeline-item {
+        padding: 0 15px 0 35px; /* Adjusted for small screens */
+        margin-bottom: 35px;
+    }
+    
+    .star {
+        width: 35px;
+        height: 35px;
+        top: -18px;
+    }
+    
+    .timeline-content {
+        margin-top: 25px;
+        padding: 0 5px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    
+    .timeline-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 }
