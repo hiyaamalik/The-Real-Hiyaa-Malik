@@ -6,7 +6,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.7);
-    backdrop-filter: blur(4px); /* softens background */
+    backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,39 @@
 /* Modal Content */
 .modal-content {
     background: white;
-    padding: 2rem 2.5rem;
     margin: auto;
-    border-radius: 12px;
-    max-width: 850px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow: hidden;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scroll Container */
+.modal-scroll-container {
+    padding: 2rem 1.8rem;
+    overflow-y: auto;
+    max-height: calc(85vh - 4rem);
+    scrollbar-width: thin;
+    scrollbar-color: #ff69b4 #f5d7e7;
+}
+
+/* Custom Scrollbar */
+.modal-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-scroll-container::-webkit-scrollbar-track {
+    background: #f5d7e7;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+.modal-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ff69b4;
+    border-radius: 3px;
 }
 
 /* Close Button */
@@ -46,6 +69,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
+    z-index: 2;
 }
 
 .close-button:hover {
@@ -59,6 +83,7 @@
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
+    padding: 0 8px;
 }
 
 /* Sections */
@@ -74,6 +99,7 @@
     border-bottom: 1px solid #f5d7e7;
     padding-bottom: 5px;
     font-weight: 600;
+    text-align: left;
 }
 
 .section-content {
@@ -81,6 +107,9 @@
     color: #333;
     font-size: 15px;
     padding: 0 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
 }
 
 /* Extra Images Grid */
@@ -97,22 +126,28 @@
     border-radius: 8px;
     border: 1px solid #eee;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.extra-image:hover {
+    transform: scale(1.02);
 }
 
 /* Lists */
-.achievements-list,
-.fullDescription-list {
+.achievements-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.achievement-item,
-.fullDescription-item {
+.achievement-item {
     margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
     font-size: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
 }
 
 .bullet {
@@ -128,6 +163,8 @@
 .link-container {
     text-align: center;
     margin-top: 20px;
+    padding: 0 8px;
+    margin-bottom: 1rem;
 }
 
 .project-link {
@@ -138,27 +175,28 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
     font-size: 15px;
 }
 
 .project-link:hover {
     background-color: #ff69b4;
     color: white;
-    bottom: 3 rem;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Tablet Styles */
 @media (min-width: 768px) {
     .modal-content {
+        max-width: 600px;
+    }
+    
+    .modal-scroll-container {
         padding: 2.5rem;
-        margin: 30px;
-        width: calc(100% - 60px);
     }
 
     .close-button {
-        top: 15px;
-        right: 15px;
         font-size: 1.5rem;
         width: 40px;
         height: 40px;
@@ -180,8 +218,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .achievement-item,
-    .fullDescription-item {
+    .achievement-item {
         font-size: 16px;
     }
 
@@ -191,39 +228,6 @@
 
     .project-link {
         font-size: 16px;
-        bottom: 3 rem;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 1024px) {
-    .modal-content {
-        padding: 3rem;
-        max-height: 90vh;
-        margin: 0 auto;
-    }
-
-    .modal-title {
-        font-size: 28px;
-    }
-
-    .section-content {
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-    .achievement-item,
-    .fullDescription-item {
-        font-size: 17px;
-    }
-
-    .bullet {
-        font-size: 20px;
-    }
-
-    .project-link {
-        padding: 12px 22px;
-        bottom: 3 rem;
     }
 }
 
@@ -236,8 +240,12 @@
     }
 
     .modal-content {
-        padding: 1.5rem;
         width: 100%;
+        max-height: calc(95vh - 60px);
+    }
+
+    .modal-scroll-container {
+        padding: 1.5rem;
         max-height: calc(95vh - 60px);
     }
 
@@ -266,8 +274,7 @@
         font-size: 14px;
     }
 
-    .achievement-item,
-    .fullDescription-item {
+    .achievement-item {
         font-size: 14px;
     }
 
@@ -278,7 +285,6 @@
     .project-link {
         padding: 10px 16px;
         font-size: 14px;
-        bottom: 3 rem;
     }
 }
 
@@ -294,6 +300,5 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        bottom: 3 rem;
     }
 }
