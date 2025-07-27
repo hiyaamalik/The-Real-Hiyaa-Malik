@@ -1,4 +1,4 @@
-/* MOBILE-FIRST APPROACH - UPDATED TO MATCH LAPTOP LAYOUT */
+/* MOBILE-FIRST APPROACH - FINAL ADJUSTMENTS */
 .contact-section {
     position: relative;
     padding: 20px;
@@ -25,14 +25,14 @@
 
 .contact-links {
     position: absolute;
-    top: 50%;
+    top: 65%; /* Shifted down from 50% */
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: row; /* Horizontal layout like laptop */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Smaller gap for mobile */
+    gap: 15px; /* Slightly reduced gap */
     width: 100%;
 }
 
@@ -41,23 +41,23 @@
     color: #0a0000;
     display: inline-block;
     margin: 0;
-    text-decoration: none; /* No underline like laptop */
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: 0.9rem; /* Reduced from 1rem */
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     font-family: inherit;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 .contact-links a:hover, 
 .modal-btn:hover {
     color: #cc006d;
-    text-decoration: underline; /* Underline only on hover like laptop */
+    text-decoration: underline;
 }
 
-/* TABLET STYLES - COMPLETELY UNCHANGED */
+/* TABLET STYLES - 100% UNCHANGED */
 @media (min-width: 768px) {
     .contact-section {
         padding: 10px;
@@ -77,10 +77,16 @@
     .contact-links {
         flex-direction: row;
         gap: 60px;
+        top: 50%; /* Reset to original */
+    }
+    
+    .contact-links a,
+    .modal-btn {
+        font-size: 1rem; /* Reset to original */
     }
 }
 
-/* DESKTOP STYLES - COMPLETELY UNCHANGED */
+/* DESKTOP STYLES - 100% UNCHANGED */
 @media (min-width: 1024px) {
     .contact-section {
         padding: 2px;
@@ -100,6 +106,7 @@
     .contact-links {
         flex-direction: row;
         gap: 0;
+        top: 50%; /* Reset to original */
     }
 
     .contact-links a, 
@@ -107,6 +114,7 @@
         margin: 95px;
         margin-top: 8.5cm;
         text-decoration: none;
+        font-size: 1rem; /* Reset to original */
     }
 
     .contact-links a:nth-child(-n+2),
@@ -115,7 +123,7 @@
     }
 }
 
-/* MODAL STYLES - COMPLETELY UNCHANGED */
+/* ALL MODAL STYLES REMAIN 100% UNCHANGED */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -177,7 +185,7 @@
     background-color: #d65a92;
 }
 
-/* Desktop Modal Adjustments - UNCHANGED */
+/* Desktop Modal - UNCHANGED */
 @media (min-width: 1024px) {
     .modal-content {
         max-width: 500px;
