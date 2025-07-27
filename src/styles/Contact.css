@@ -26,10 +26,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Increased from 15px to 30px */
+    gap: 16px; /* Increased from 15px to 30px */
     width: 90%; /* Constrained width */
     flex-wrap: nowrap; /* Prevent wrapping */
-    padding: 0 10px; /* Add some padding */
+    padding: 0 20px; /* Add some padding */
     box-sizing: border-box;
 }
 
@@ -47,7 +47,7 @@
     font-family: inherit;
     white-space: nowrap;
     flex-shrink: 0; 
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 
