@@ -41,6 +41,7 @@ const Hero = () => {
 };
 
 const styles = {
+
   container: {
     width: '100%',
     maxWidth: '1200px',
@@ -75,9 +76,11 @@ const styles = {
     borderTop: '1px solid #000',
     borderBottom: '1px solid #000',
     marginBottom: '40px',
-    marginTop: '-60px',
+    marginTop: '-30px', // Changed from -60px to -30px to reduce overlap
+    position: 'relative', // Added for better z-index control
+    zIndex: 10, // Ensures nav stays above other elements
     '@media (max-width: 768px)': {
-      marginTop: '-20px',
+      marginTop: '0px', // Changed from -20px to 0px for mobile
       marginBottom: '30px',
       borderTop: 'none',
     },
