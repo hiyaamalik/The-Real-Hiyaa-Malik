@@ -34,9 +34,9 @@ const ProjectModal = ({ show, onClose, project }) => {
           ))}
         </div>
 
-        {/* Achievements (if any) */}
+
         <div style={styles.achievements}>
-          <h3 style={styles.subtitle}>Achievements:</h3>
+          <h3 style={styles.subtitle}>Key Points</h3>
           <ul style={styles.list}>
             {project.modalContent.achievements.map((item, index) => (
               <li key={index} style={styles.listItem}>{item}</li>

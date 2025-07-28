@@ -51,6 +51,31 @@
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
 }
 
+/* Match fullDescription to achievements style */
+.fullDescription-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fullDescription-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.fullDescription-bullet {
+    color: #ff69b4;
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
 /* Small Mobile Phones */
 @media (max-width: 480px) {
     .extras-section {
@@ -75,6 +100,10 @@
     .extra-card:first-child {
         width: 95%;
         max-width: 250px;
+    }
+    
+    .fullDescription-item {
+        font-size: 14px;
     }
 }
 
@@ -111,6 +140,10 @@
     .extra-card:nth-child(3) {
         grid-column: 1 / -1;
         justify-self: center;
+    }
+    
+    .fullDescription-item {
+        font-size: 15px;
     }
 }
 
@@ -155,12 +188,14 @@
         grid-column: auto;
         justify-self: auto;
     }
+    
+    .fullDescription-item {
+        font-size: 16px;
+    }
 }
 
 /* Large Desktop */
 @media (min-width: 1200px) {
-
-    
     .extras-grid {
         gap: 50px;
     }
