@@ -16,6 +16,12 @@ import SensorSyncUI3 from '../assets/SensorSyncUI3.png';
 import SensorSyncUI4 from '../assets/SensorSyncUI4.png';
 import SensorSyncUI5 from '../assets/SensorSyncUI5.png';
 import SensorSyncUI6 from '../assets/SensorSyncUI6.png';
+import cybvector from '../assets/cybvector.jpeg';
+import projectn1 from '../assets/projectn1.png';
+import projectn2 from '../assets/projectn2.png';
+import pN from '../assets/pN.png';
+import SkinT from '../assets/SkinT.png';
+import pneumoniaDiagnosis from '../assets/Early pedatric pneumonia detection.png';
 
 
 
@@ -28,7 +34,7 @@ const Projects = () => {
     {
     title: 'SkinThesis.AI',
     description: 'AI and IOT enabled Smart Mirror',
-    image: 'https://camo.githubusercontent.com/595a3476933508cc144067eae4aa4116b9e2184270316b0503c360be60fc1836/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f33612f61382f35312f33616138353161306633346436373033633766306163376666366134316538612e706e67',
+    image: SkinT,
     details: (
       <div className="project-details">
         <h3>Project Overview</h3>
@@ -116,9 +122,7 @@ const Projects = () => {
         
         <h3>Impact</h3>
         <p>
-           The system achieved 92% detection accuracy on test data, significantly reducing response time 
-        to cyber threats. The self-healing automation decreased manual intervention by 75% in simulated 
-        environments, demonstrating how AI can enhance traditional cybersecurity operations.
+           
         </p>
       </div>
     ),
@@ -126,10 +130,8 @@ const Projects = () => {
     SelfHeal, SelfHeal2
   ],
   achievements: [
-    'Reduced threat response time by 82% compared to manual monitoring',
-    'Achieved 92% detection accuracy on test datasets',
-    'Implemented 5 distinct self-healing protocols for different attack types',
-    'Processes 10,000+ network events per minute in real-time'
+    'Got selected for Finale Round at AICraft 2.0 conducted by Amity Centre of Artificial Intelligence ',
+    
   ],
   link: 'https://github.com/hiyaamalik/Self-Healing-AI-for-Network-Security'
 },
@@ -185,6 +187,166 @@ const Projects = () => {
   ],
   link: 'https://github.com/hiyaamalik/SensorMonitoringSystem' 
 },
+  {
+  title: 'CybVector',
+  description: 'AI-Powered Cybersecurity Assistant',
+  image: cybvector, 
+  details: (
+    <div className="project-details">
+      <h3>Project Overview</h3>
+      <p>
+        CybVector is a cutting-edge, web-based AI chatbot designed as a personal cybersecurity analyst. It leverages Google’s Gemini large language model to provide real-time threat intelligence, interactive security posture assessments, and expert cybersecurity guidance in a natural conversational interface.
+      </p>
+
+      <h3>Key Features & Technologies</h3>
+      <ul>
+        <li><strong>Conversational AI:</strong> Powered by Google Gemini-1.5-flash model for natural, intelligent dialogue.</li>
+        <li><strong>Real-Time Threat Analysis:</strong> Fetches live data from VirusTotal and AbuseIPDB to evaluate IPs, domains, or URLs instantly.</li>
+        <li><strong>Interactive Security Hygiene Check:</strong> An engaging quiz that assesses user security posture and provides actionable feedback with a dynamic conversational flow.</li>
+        <li><strong>Modern Analyst’s Terminal UI:</strong> Clean, dark-themed, responsive interface built with HTML, CSS, and vanilla JavaScript.</li>
+        <li><strong>Robust Backend:</strong> FastAPI-based Python backend ensuring high performance and seamless API integration.</li>
+      </ul>
+
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li>Backend developed using <strong>FastAPI</strong> for asynchronous, fast HTTP serving.</li>
+        <li>Integrated external threat intelligence APIs: <strong>VirusTotal</strong> and <strong>AbuseIPDB</strong>.</li>
+        <li>Utilizes <strong>google-generativeai</strong> library to access Google Gemini models.</li>
+        <li>Environment variables managed securely using <strong>python-dotenv</strong>.</li>
+        <li>Frontend built with <strong>vanilla JavaScript</strong>, ensuring lightweight and fast loading experience.</li>
+      </ul>
+
+      <h3>Impact</h3>
+      <p>
+        CybVector empowers users with expert cybersecurity advice on demand, providing accessible real-time threat detection and personalized security recommendations. The interactive quiz feature engages users in assessing their security hygiene, promoting improved cybersecurity awareness. This project demonstrates how AI can augment cybersecurity operations with efficient, conversational intelligence.
+      </p>
+    </div>
+  ),
+  extraImages: [
+    
+  ],
+  achievements: [
+    'Implemented seamless integration with VirusTotal and AbuseIPDB for live threat data',
+    'Created dynamic AI-powered conversational flow with Google Gemini LLM',
+    'Built a professional dark-themed Analyst’s Terminal UI from scratch',
+    'Delivered an interactive security hygiene quiz that maintains conversational context'
+  ],
+  link: 'https://github.com/hiyaamalik/CybVector'
+},
+{
+  title: 'Project N: Women Safety and Analytics Tool',
+  description: 'AI-powered women’s safety & analytics platform with real-time alerts using OpenVINO & OpenCV',
+  image: pN, 
+  details: (
+    <div className="project-details">
+      <h3>Project Overview</h3>
+      <p>
+        Project N is an AI-driven Women Safety and Analytics Tool developed by Team Adyant. 
+        It proactively monitors environments using AI-based smart surveillance, detects potential risks, 
+        and provides immediate assistance through integrated mobile and web applications. 
+        Unlike traditional solutions that focus on post-incident responses, Project N emphasizes real-time intervention and prevention.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Smart Surveillance System:</strong> AI-powered gender detection, crowd density analysis, and SOS gesture recognition.</li>
+        <li><strong>Gesture-Based SOS:</strong> Detects silent distress signals (thumb & pinky gesture) for discreet emergency alerts.</li>
+        <li><strong>User-Side Mobile & Web App:</strong> SOS trigger button with multilingual support, real-time geolocation tracking, and legal resource hub.</li>
+        <li><strong>Automated Alerts:</strong> Sends emergency notifications via Twilio API, activates loud alarms, and provides location details to responders.</li>
+      </ul>
+
+      <h3>Technical Implementation</h3>
+      <ul>
+        <li><strong>Computer Vision Models:</strong> Utilized OpenVINO™ and OpenCV with Intel Zoo pre-trained models for face, gender, and gesture detection.</li>
+        <li><strong>Real-Time Processing:</strong> Achieved ~36.79ms per frame inference time for low-latency performance.</li>
+        <li><strong>Alert Mechanism:</strong> Context-aware SOS system using Geocoder & Nominatim for location tracking and Twilio for instant notifications.</li>
+        <li><strong>Cross-Platform Compatibility:</strong> Works with existing CCTV infrastructure, smartphones, and Intel CPUs/GPUs/VPUs.</li>
+      </ul>
+
+      <h3>Impact</h3>
+      <p>
+        Project N enhances women’s safety through proactive threat detection and rapid emergency response. 
+        Its scalable, low-cost architecture makes it suitable for integration with urban safety initiatives, 
+        community support systems, and law enforcement. The multilingual, accessible platform empowers users 
+        while minimizing false alarms through intelligent gesture-based activation.
+      </p>
+    </div>
+  ),
+  extraImages: [ 
+    projectn1,
+    projectn2,
+   ],
+  achievements: [
+    'Implemented AI-based real-time gender and crowd detection with OpenVINO & OpenCV',
+    'Developed gesture-based distress detection system with <40ms inference latency',
+    'Integrated Twilio API for automated emergency alerts with geolocation',
+    'Designed scalable solution compatible with existing CCTV and smartphone infrastructure',
+    'Research Paper published in IEEE Xplore https://ieeexplore.ieee.org/document/11063727',
+    'Won 2nd place at AI Horizon 2.0, IIM Bodh Gaya',
+    'Selected as Top 10 Finalist at IEEE Intel INDICON 2024, IIT Kharagpur'
+  ],
+  link: 'https://github.com/whoravinder/Project-N-Women-Safety-and-Analytics-Tool'
+},
+{
+  title: 'Early Paediatric Pneumonia Diagnosis',
+  description: 'VGG-19 vs CNN: Pediatric Pneumonia Detection',
+  image: pneumoniaDiagnosis, 
+  details: (
+    <div className="project-details">
+      <h3>Project Overview</h3>
+      <p>
+        This project focuses on the early diagnosis of pediatric pneumonia using deep learning methods applied to chest X-ray images. 
+        It compares the performance of a pre-trained VGG-19 model (transfer learning) and a custom CNN model developed from scratch, 
+        analyzing their accuracy, training time, and complexity for binary classification (Normal vs Pneumonia).
+      </p>
+
+      <h3>Key Features & Methodology</h3>
+      <ul>
+        <li><strong>Transfer Learning with VGG-19:</strong> Used pre-trained convolutional layers with frozen weights and a custom dense output layer for classification.</li>
+        <li><strong>Custom CNN Model:</strong> Designed and trained from scratch with convolutional, max pooling, batch normalization, and dropout layers for better generalization.</li>
+        <li><strong>Image Augmentation:</strong> Applied rotation, shifting, zooming, shearing, and flipping to enhance model robustness.</li>
+        <li><strong>Evaluation Metrics:</strong> Compared accuracy, speed, and model complexity between approaches.</li>
+      </ul>
+
+      <h3>Dataset</h3>
+      <p>
+        Pediatric chest X-ray dataset from Guangzhou Women and Children's Medical Center, China, with 8,287 labeled images (Normal/Pneumonia).
+      </p>
+      <ul>
+        <li><strong>Training Set:</strong> Normal: 805 | Pneumonia: 3,406</li>
+        <li><strong>Test Set:</strong> Normal: 234 | Pneumonia: 390</li>
+        <li><strong>Validation Set:</strong> Normal: 536 | Pneumonia: 2,916</li>
+      </ul>
+
+      <h3>Technical Highlights</h3>
+      <ul>
+        <li>VGG-19 model trained with Adam optimizer (lr=1e-3) and binary cross-entropy loss.</li>
+        <li>Custom CNN trained with SGD optimizer and binary cross-entropy loss.</li>
+        <li>Applied batch normalization and dropout (20%) for overfitting prevention.</li>
+        <li>Used softmax activation in the final output layer for binary classification.</li>
+      </ul>
+
+      <h3>Results</h3>
+      <p>
+        While VGG-19 provided strong results leveraging pre-trained features, the custom CNN achieved better overall accuracy, trained faster, 
+        and was less computationally intensive, making it more suitable for early pediatric pneumonia detection in real-world applications.
+      </p>
+    </div>
+  ),
+  extraImages: [
+    
+  ],
+  achievements: [
+    'Achieved higher classification accuracy with custom CNN compared to VGG-19',
+    'Reduced training time and computational requirements with custom CNN',
+    'Successfully applied advanced augmentation for better generalization',
+    'Built reproducible pipeline for pediatric pneumonia detection using chest X-rays'
+  ],
+  link: 'https://github.com/hiyaamalik/earlypaediatricpneumoniadiagnosis'
+}
+
+
+
     
   ];
 
