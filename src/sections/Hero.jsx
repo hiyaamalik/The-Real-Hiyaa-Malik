@@ -27,8 +27,7 @@ const Hero = () => {
           <strong>I'VE ALWAYS BEEN DRAWN TO IDEAS — THE KIND YOU CAN FEEL, NOT JUST SOLVE.</strong>
         </p>
         <p style={styles.mainText}>
-          I've always been drawn to ideas — the kind you can feel, not just solve. 
-          That's what led me to AI: a space where logic and technology meet creativity, and small ideas can turn into powerful tools. I love building
+         That's what led me to AI: a space where logic and technology meet creativity, and small ideas can turn into powerful tools. I love building
           thoughtful, creative, and impactful projects. Whether it's sparking curiosity, telling better stories, or helping people see the world a
           little differently, I enjoy not just using intelligent tools but shaping them too. My work is guided by curiosity, clarity, and creativity. I'm
           not chasing complexity for the sake of it. I care about building things that make sense, feel right, and leave an impression.
